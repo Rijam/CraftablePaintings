@@ -16,28 +16,27 @@ namespace CraftablePaintings.Items
 		public override void SetDefaults()
 		{
 
-			item.maxStack = 999;
-			item.consumable = true;
-			item.width = 32;
-			item.height = 48;
-			item.value = Item.sellPrice(0, 0, 1, 0);
-			item.rare = ItemRarityID.White;
-			item.useTurn = true;
-			item.autoReuse = true;
-			item.useAnimation = 15;
-			item.useTime = 10;
-			item.useStyle = ItemUseStyleID.SwingThrow;
-			item.createTile = ModContent.TileType<Tiles.EaselTile>();
+			Item.maxStack = 999;
+			Item.consumable = true;
+			Item.width = 32;
+			Item.height = 48;
+			Item.value = Item.sellPrice(0, 0, 1, 0);
+			Item.rare = ItemRarityID.White;
+			Item.useTurn = true;
+			Item.autoReuse = true;
+			Item.useAnimation = 15;
+			Item.useTime = 10;
+			Item.useStyle = ItemUseStyleID.Swing;
+			Item.createTile = ModContent.TileType<Tiles.EaselTile>();
 		}
 		public override void AddRecipes()
 		{
-			ModRecipe recipe = new ModRecipe(mod);
-			recipe.AddRecipeGroup("Wood", 6);
-			recipe.AddIngredient(ModContent.ItemType<Canvas>(), 1);
-			recipe.AddIngredient(ItemID.Paintbrush, 1);
-			recipe.AddTile(TileID.Sawmill);
-			recipe.SetResult(this);
-			recipe.AddRecipe();
+			CreateRecipe()
+				.AddRecipeGroup(RecipeGroupID.Wood, 6)
+				.AddIngredient(ModContent.ItemType<Canvas>())
+				.AddIngredient(ItemID.Paintbrush)
+				.AddTile(TileID.Sawmill)
+				.Register();
 		}
 	}
 }

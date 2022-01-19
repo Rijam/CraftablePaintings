@@ -13,25 +13,23 @@ namespace CraftablePaintings.Items
 		}
 		public override void SetDefaults()
 		{
-			item.maxStack = 999;
-			item.width = 46;
-			item.height = 36;
-			item.value = Item.sellPrice(0, 0, 4, 0);
-			item.rare = ItemRarityID.White;
+			Item.maxStack = 999;
+			Item.width = 46;
+			Item.height = 36;
+			Item.value = Item.sellPrice(0, 0, 4, 0);
+			Item.rare = ItemRarityID.White;
 		}
 		public override void AddRecipes()
 		{
-			ModRecipe recipe = new ModRecipe(mod);
-			recipe.AddIngredient(ItemID.Hay, 2);
-			recipe.AddTile(TileID.Loom);
-			recipe.SetResult(this);
-			recipe.AddRecipe();
+			CreateRecipe()
+				.AddIngredient(ItemID.Hay, 2)
+				.AddTile(TileID.Loom)
+				.Register();
 
-			recipe = new ModRecipe(mod);
-			recipe.AddIngredient(ItemID.Silk, 2);
-			recipe.AddTile(TileID.Loom);
-			recipe.SetResult(this);
-			recipe.AddRecipe();
+			CreateRecipe()
+				.AddIngredient(ItemID.Silk, 2)
+				.AddTile(TileID.Loom)
+				.Register();
 		}
 	}
 }
