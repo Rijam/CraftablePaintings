@@ -9,6 +9,7 @@ namespace CraftablePaintings
 	public class CraftablePaintings : Mod
 	{
         public static CraftablePaintings Instance;
+        public static CraftablePaintingsConfigServer ConfigServer;
         public override void AddRecipes()
         {
             #region Golfer
@@ -864,7 +865,7 @@ namespace CraftablePaintings
 
             #region SGAmod
             Mod sgamod = ModLoader.GetMod("SGAmod");
-            if (sgamod != null)
+            if (sgamod != null && ModContent.GetInstance<CraftablePaintingsConfigServer>().CraftModdedPaintings)
             {
                 recipe = new ModRecipe(this);
                 recipe.AddIngredient(ModContent.ItemType<Canvas>(), 1);
@@ -912,7 +913,7 @@ namespace CraftablePaintings
 
             #region Polarities
             Mod polarities = ModLoader.GetMod("Polarities");
-            if (polarities != null)
+            if (polarities != null && ModContent.GetInstance<CraftablePaintingsConfigServer>().CraftModdedPaintings)
             {
                 recipe = new ModRecipe(this);
                 recipe.AddIngredient(ModContent.ItemType<Canvas>(), 1);
@@ -926,7 +927,7 @@ namespace CraftablePaintings
 
             #region Thorium
             Mod thorium = ModLoader.GetMod("ThoriumMod");
-            if (thorium != null)
+            if (thorium != null && ModContent.GetInstance<CraftablePaintingsConfigServer>().CraftModdedPaintings)
             {
                 recipe = new ModRecipe(this);
                 recipe.AddIngredient(ModContent.ItemType<Canvas>(), 1);
@@ -1071,7 +1072,7 @@ namespace CraftablePaintings
 
             #region Calamity's Vanities
             Mod calvalex = ModLoader.GetMod("CalValEX");
-            if (calvalex != null)
+            if (calvalex != null && ModContent.GetInstance<CraftablePaintingsConfigServer>().CraftModdedPaintings)
             {
                 recipe = new ModRecipe(this);
                 recipe.AddIngredient(ModContent.ItemType<Canvas>(), 1);
@@ -1280,7 +1281,7 @@ namespace CraftablePaintings
 
             #region pinkymod
             Mod pinkymod = ModLoader.GetMod("pinkymod");
-            if (pinkymod != null)
+            if (pinkymod != null && ModContent.GetInstance<CraftablePaintingsConfigServer>().CraftModdedPaintings)
             {
                 recipe = new ModRecipe(this);
                 recipe.AddIngredient(ModContent.ItemType<Canvas>(), 1);
@@ -1344,7 +1345,7 @@ namespace CraftablePaintings
 
             #region Shadows of Abaddon
             Mod soa = ModLoader.GetMod("SacredTools");
-            if (soa != null)
+            if (soa != null && ModContent.GetInstance<CraftablePaintingsConfigServer>().CraftModdedPaintings)
             {
                 recipe = new ModRecipe(this);
                 recipe.AddIngredient(ModContent.ItemType<Canvas>(), 1);
@@ -1421,7 +1422,7 @@ namespace CraftablePaintings
 
             #region Spirit
             Mod spirit = ModLoader.GetMod("SpiritMod");
-            if (spirit != null)
+            if (spirit != null && ModContent.GetInstance<CraftablePaintingsConfigServer>().CraftModdedPaintings)
             {
                 recipe = new ModRecipe(this);
                 recipe.AddIngredient(ModContent.ItemType<Canvas>(), 1);
@@ -1609,7 +1610,7 @@ namespace CraftablePaintings
 
             #region Split
             Mod split = ModLoader.GetMod("Split");
-            if (split != null)
+            if (split != null && ModContent.GetInstance<CraftablePaintingsConfigServer>().CraftModdedPaintings)
             {
                 recipe = new ModRecipe(this);
                 recipe.AddIngredient(ModContent.ItemType<Canvas>(), 1);
@@ -1824,10 +1825,94 @@ namespace CraftablePaintings
                 recipe.AddRecipe();
             }
             #endregion
+
+            #region Fargo's Mutant Mod
+            Mod fargoMutant = ModLoader.GetMod("Fargowiltas");
+            if (fargoMutant != null && ModContent.GetInstance<CraftablePaintingsConfigServer>().CraftModdedPaintings)
+            {
+                recipe = new ModRecipe(this);
+                recipe.AddIngredient(ModContent.ItemType<Canvas>(), 1);
+                recipe.AddIngredient(ItemID.WhitePaint, 1);
+                recipe.AddIngredient(ItemID.LunarOre, 1);
+                recipe.AddTile(ModContent.TileType<EaselTile>());
+                recipe.SetResult(fargoMutant.ItemType("EchPainting"), 1);
+                recipe.AddRecipe();
+            }
+            #endregion
+
+            #region Fargo's Soul Mod
+            Mod fargoSoul = ModLoader.GetMod("FargowiltasSouls");
+            if (fargoSoul != null && ModContent.GetInstance<CraftablePaintingsConfigServer>().CraftModdedPaintings)
+            {
+                recipe = new ModRecipe(this);
+                recipe.AddIngredient(ModContent.ItemType<Canvas>(), 1);
+                recipe.AddIngredient(ItemID.PurplePaint, 1);
+                recipe.AddIngredient(ItemID.BeeWax, 1);
+                recipe.AddTile(ModContent.TileType<EaselTile>());
+                recipe.SetResult(fargoSoul.ItemType("TwentyTwoPainting"), 1);
+                recipe.AddRecipe();
+
+                recipe = new ModRecipe(this);
+                recipe.AddIngredient(ModContent.ItemType<Canvas>(), 1);
+                recipe.AddIngredient(ItemID.BrownPaint, 1);
+                recipe.AddIngredient(fargoSoul.ItemType("Sadism"), 1);
+                recipe.AddTile(ModContent.TileType<EaselTile>());
+                recipe.SetResult(fargoSoul.ItemType("ScremPainting"), 1);
+                recipe.AddRecipe();
+            }
+            #endregion
+
+            #region Mod of Redemption
+            Mod mor = ModLoader.GetMod("Redemption");
+            if (mor != null && ModContent.GetInstance<CraftablePaintingsConfigServer>().CraftModdedPaintings)
+            {
+                recipe = new ModRecipe(this);
+                recipe.AddIngredient(ModContent.ItemType<Canvas>(), 1);
+                recipe.AddIngredient(ItemID.GrayPaint, 1);
+                recipe.AddTile(ModContent.TileType<EaselTile>());
+                recipe.SetResult(mor.ItemType("BrothersPainting"), 1);
+                recipe.AddRecipe();
+
+                recipe = new ModRecipe(this);
+                recipe.AddIngredient(ModContent.ItemType<Canvas>(), 1);
+                recipe.AddIngredient(ItemID.BrownPaint, 1);
+                recipe.AddTile(ModContent.TileType<EaselTile>());
+                recipe.SetResult(mor.ItemType("ForestGolemPainting"), 1);
+                recipe.AddRecipe();
+
+                recipe = new ModRecipe(this);
+                recipe.AddIngredient(ModContent.ItemType<Canvas>(), 1);
+                recipe.AddIngredient(ItemID.GrayPaint, 1);
+                recipe.AddTile(ModContent.TileType<EaselTile>());
+                recipe.SetResult(mor.ItemType("BrothersPaintingAlt"), 1);
+                recipe.AddRecipe();
+            }
+            #endregion
+
+            #region Amongst the Cosmos
+            Mod atc = ModLoader.GetMod("ATC");
+            if (atc != null && ModContent.GetInstance<CraftablePaintingsConfigServer>().CraftModdedPaintings)
+            {
+                recipe = new ModRecipe(this);
+                recipe.AddIngredient(ModContent.ItemType<Canvas>(), 1);
+                recipe.AddIngredient(ItemID.DeepGreenPaint, 1);
+                recipe.AddTile(ModContent.TileType<EaselTile>());
+                recipe.SetResult(atc.ItemType("AccursedWoods"), 1);
+                recipe.AddRecipe();
+
+                recipe = new ModRecipe(this);
+                recipe.AddIngredient(ModContent.ItemType<Canvas>(), 1);
+                recipe.AddIngredient(ItemID.RedPaint, 1);
+                recipe.AddTile(ModContent.TileType<EaselTile>());
+                recipe.SetResult(atc.ItemType("PrayUnderTheCrimsonMoon"), 1);
+                recipe.AddRecipe();
+            }
+            #endregion
         }
         public override void Unload()
         {
             Instance = null;
+            ConfigServer = null;
         }
     }
 }
