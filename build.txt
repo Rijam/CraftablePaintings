@@ -1,0 +1,9 @@
+displayName = Craftable Paintings
+author = Rijam
+version = 1.0
+buildIgnore = .vs\*, obj\*, bin\*, *.xcf, .git\*, git\*, Effects\fxcompiler
+homepage = https://discord.com/invite/t63JzNHzvu
+includePDB = true
+hideCode = false
+hideResources = false
+includeSource = true
