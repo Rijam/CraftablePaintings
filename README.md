@@ -16,3 +16,7 @@ Includes paintings from:
 	Shadows of Abaddon
 	Spirit
 	Split
+	Fargo's Mutant Mod
+	Fargo's Souls Mod
+	Mod of Redemption
+	Amongst the Cosmos
