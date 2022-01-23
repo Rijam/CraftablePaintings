@@ -1132,7 +1132,7 @@ namespace CraftablePaintings
 
                 recipe = new ModRecipe(this);
                 recipe.AddIngredient(ModContent.ItemType<Canvas>(), 1);
-                recipe.AddIngredient(ItemID.RedPaint, 1);
+                recipe.AddIngredient(ItemID.VioletPaint, 1);
                 recipe.AddTile(ModContent.TileType<EaselTile>());
                 recipe.SetResult(calvalex.ItemType("ModIconPainting"), 1);
                 recipe.AddRecipe();
@@ -1275,6 +1275,41 @@ namespace CraftablePaintings
                 recipe.AddIngredient(ItemID.SkyBluePaint, 1);
                 recipe.AddTile(ModContent.TileType<EaselTile>());
                 recipe.SetResult(calvalex.ItemType("WormHeaven"), 1);
+                recipe.AddRecipe();
+
+                recipe = new ModRecipe(this);
+                recipe.AddIngredient(ModContent.ItemType<Canvas>(), 1);
+                recipe.AddIngredient(ItemID.RedPaint, 1);
+                recipe.AddTile(ModContent.TileType<EaselTile>());
+                recipe.SetResult(calvalex.ItemType("CalamityPaint"), 1);
+                recipe.AddRecipe();
+
+                recipe = new ModRecipe(this);
+                recipe.AddIngredient(ModContent.ItemType<Canvas>(), 1);
+                recipe.AddIngredient(ItemID.DeepOrangePaint, 1);
+                recipe.AddTile(ModContent.TileType<EaselTile>());
+                recipe.SetResult(calvalex.ItemType("CalamityPaintRetold"), 1);
+                recipe.AddRecipe();
+
+                recipe = new ModRecipe(this);
+                recipe.AddIngredient(ModContent.ItemType<Canvas>(), 1);
+                recipe.AddIngredient(ItemID.BlackPaint, 1);
+                recipe.AddTile(ModContent.TileType<EaselTile>());
+                recipe.SetResult(calvalex.ItemType("DraedonPopcorn"), 1);
+                recipe.AddRecipe();
+
+                recipe = new ModRecipe(this);
+                recipe.AddIngredient(ModContent.ItemType<Canvas>(), 1);
+                recipe.AddIngredient(ItemID.GrayPaint, 1);
+                recipe.AddTile(ModContent.TileType<EaselTile>());
+                recipe.SetResult(calvalex.ItemType("EyeofXeroc"), 1);
+                recipe.AddRecipe();
+
+                recipe = new ModRecipe(this);
+                recipe.AddIngredient(ModContent.ItemType<Canvas>(), 1);
+                recipe.AddIngredient(ItemID.RedPaint, 1);
+                recipe.AddTile(ModContent.TileType<EaselTile>());
+                recipe.SetResult(calvalex.ItemType("OldModIconPainting"), 1);
                 recipe.AddRecipe();
             }
             #endregion
