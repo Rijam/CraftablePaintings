@@ -908,6 +908,15 @@ namespace CraftablePaintings
                 recipe.AddTile(ModContent.TileType<EaselTile>());
                 recipe.SetResult(sgamod.ItemType("UnderTheWaterfallPainting"), 1);
                 recipe.AddRecipe();
+
+                ParadoxGeneralPaintingRecipe recipe2 = new ParadoxGeneralPaintingRecipe(this);
+                recipe2.AddIngredient(ModContent.ItemType<Canvas>(), 1);
+                recipe2.AddIngredient(ItemID.NegativePaint, 1);
+                recipe2.AddIngredient(sgamod.ItemType("Nightmare"), 1);//Hellion's Gift
+                recipe2.AddIngredient(sgamod.ItemType("DrakeniteBar"), 1);
+                recipe2.AddTile(ModContent.TileType<EaselTile>());
+                recipe2.SetResult(sgamod.ItemType("ParadoxGeneralPainting"), 1);
+                recipe2.AddRecipe();
             }
             #endregion
 
@@ -1943,11 +1952,509 @@ namespace CraftablePaintings
                 recipe.AddRecipe();
             }
             #endregion
+
+            #region Echoes of the Ancients
+            Mod eota = ModLoader.GetMod("EchoesoftheAncients");
+            if (eota != null && ModContent.GetInstance<CraftablePaintingsConfigServer>().CraftModdedPaintings)
+            {
+                recipe = new ModRecipe(this);
+                recipe.AddIngredient(ModContent.ItemType<Canvas>(), 1);
+                recipe.AddIngredient(ItemID.OrangePaint, 1);
+                recipe.AddTile(ModContent.TileType<EaselTile>());
+                recipe.SetResult(eota.ItemType("Lad"), 1);
+                recipe.AddRecipe();
+
+                recipe = new ModRecipe(this);
+                recipe.AddIngredient(ModContent.ItemType<Canvas>(), 1);
+                recipe.AddIngredient(ItemID.GreenPaint, 1);
+                recipe.AddTile(ModContent.TileType<EaselTile>());
+                recipe.SetResult(eota.ItemType("Soft_Sunrise_Item"), 1);
+                recipe.AddRecipe();
+            }
+            #endregion
+
+            #region Valhalla Mod
+            Mod valhalla = ModLoader.GetMod("Tamet");
+            if (valhalla != null && ModContent.GetInstance<CraftablePaintingsConfigServer>().CraftModdedPaintings)
+            {
+                recipe = new ModRecipe(this);
+                recipe.AddIngredient(ModContent.ItemType<Canvas>(), 1);
+                recipe.AddIngredient(ItemID.BlackPaint, 1);
+                recipe.AddTile(ModContent.TileType<EaselTile>());
+                recipe.SetResult(valhalla.ItemType("AlbumCross"), 1);
+                recipe.AddRecipe();
+
+                recipe = new ModRecipe(this);
+                recipe.AddIngredient(ModContent.ItemType<Canvas>(), 1);
+                recipe.AddIngredient(ItemID.NegativePaint, 1);
+                recipe.AddTile(ModContent.TileType<EaselTile>());
+                recipe.SetResult(valhalla.ItemType("AlbumDemonDays"), 1);
+                recipe.AddRecipe();
+
+                recipe = new ModRecipe(this);
+                recipe.AddIngredient(ModContent.ItemType<Canvas>(), 1);
+                recipe.AddIngredient(ItemID.WhitePaint, 1);
+                recipe.AddTile(ModContent.TileType<EaselTile>());
+                recipe.SetResult(valhalla.ItemType("AlbumEtazhi"), 1);
+                recipe.AddRecipe();
+
+                recipe = new ModRecipe(this);
+                recipe.AddIngredient(ModContent.ItemType<Canvas>(), 1);
+                recipe.AddIngredient(ItemID.GrayPaint, 1);
+                recipe.AddTile(ModContent.TileType<EaselTile>());
+                recipe.SetResult(valhalla.ItemType("AlbumIgor"), 1);
+                recipe.AddRecipe();
+
+                recipe = new ModRecipe(this);
+                recipe.AddIngredient(ModContent.ItemType<Canvas>(), 1);
+                recipe.AddIngredient(ItemID.SkyBluePaint, 1);
+                recipe.AddTile(ModContent.TileType<EaselTile>());
+                recipe.SetResult(valhalla.ItemType("AlbumNevermind"), 1);
+                recipe.AddRecipe();
+
+                recipe = new ModRecipe(this);
+                recipe.AddIngredient(ModContent.ItemType<Canvas>(), 1);
+                recipe.AddIngredient(ItemID.YellowPaint, 1);
+                recipe.AddTile(ModContent.TileType<EaselTile>());
+                recipe.SetResult(valhalla.ItemType("AlbumOneHundredMornings"), 1);
+                recipe.AddRecipe();
+
+                recipe = new ModRecipe(this);
+                recipe.AddIngredient(ModContent.ItemType<Canvas>(), 1);
+                recipe.AddIngredient(ItemID.BlackPaint, 1);
+                recipe.AddTile(ModContent.TileType<EaselTile>());
+                recipe.SetResult(valhalla.ItemType("AlbumRAM"), 1);
+                recipe.AddRecipe();
+
+                recipe = new ModRecipe(this);
+                recipe.AddIngredient(ModContent.ItemType<Canvas>(), 1);
+                recipe.AddIngredient(ItemID.BrownPaint, 1);
+                recipe.AddTile(ModContent.TileType<EaselTile>());
+                recipe.SetResult(valhalla.ItemType("AlbumSmallTown"), 1);
+                recipe.AddRecipe();
+
+                recipe = new ModRecipe(this);
+                recipe.AddIngredient(ModContent.ItemType<Canvas>(), 1);
+                recipe.AddIngredient(ItemID.GrayPaint, 1);
+                recipe.AddTile(ModContent.TileType<EaselTile>());
+                recipe.SetResult(valhalla.ItemType("AlbumTrilogy"), 1);
+                recipe.AddRecipe();
+
+                recipe = new ModRecipe(this);
+                recipe.AddIngredient(ModContent.ItemType<Canvas>(), 1);
+                recipe.AddIngredient(ItemID.DeepOrangePaint, 1);
+                recipe.AddTile(ModContent.TileType<EaselTile>());
+                recipe.SetResult(valhalla.ItemType("MemoriesOfFire"), 1);
+                recipe.AddRecipe();
+
+                recipe = new ModRecipe(this);
+                recipe.AddIngredient(ModContent.ItemType<Canvas>(), 1);
+                recipe.AddIngredient(ItemID.SkyBluePaint, 1);
+                recipe.AddTile(ModContent.TileType<EaselTile>());
+                recipe.SetResult(valhalla.ItemType("PaintingCloud"), 1);
+                recipe.AddRecipe();
+
+                recipe = new ModRecipe(this);
+                recipe.AddIngredient(ModContent.ItemType<Canvas>(), 1);
+                recipe.AddIngredient(ItemID.DeepRedPaint, 1);
+                recipe.AddTile(ModContent.TileType<EaselTile>());
+                recipe.SetResult(valhalla.ItemType("PaintingDoom"), 1);
+                recipe.AddRecipe();
+
+                recipe = new ModRecipe(this);
+                recipe.AddIngredient(ModContent.ItemType<Canvas>(), 1);
+                recipe.AddIngredient(ItemID.GreenPaint, 1);
+                recipe.AddTile(ModContent.TileType<EaselTile>());
+                recipe.SetResult(valhalla.ItemType("PaintingEater"), 1);
+                recipe.AddRecipe();
+
+                recipe = new ModRecipe(this);
+                recipe.AddIngredient(ModContent.ItemType<Canvas>(), 1);
+                recipe.AddIngredient(ItemID.OrangePaint, 1);
+                recipe.AddTile(ModContent.TileType<EaselTile>());
+                recipe.SetResult(valhalla.ItemType("PaintingPumpkin"), 1);
+                recipe.AddRecipe();
+
+                recipe = new ModRecipe(this);
+                recipe.AddIngredient(ModContent.ItemType<Canvas>(), 1);
+                recipe.AddIngredient(ItemID.BrownPaint, 1);
+                recipe.AddTile(ModContent.TileType<EaselTile>());
+                recipe.SetResult(valhalla.ItemType("PaintingPwnHammer"), 1);
+                recipe.AddRecipe();
+
+                recipe = new ModRecipe(this);
+                recipe.AddIngredient(ModContent.ItemType<Canvas>(), 1);
+                recipe.AddIngredient(ItemID.LimePaint, 1);
+                recipe.AddTile(ModContent.TileType<EaselTile>());
+                recipe.SetResult(valhalla.ItemType("PaintingSlime"), 1);
+                recipe.AddRecipe();
+
+                recipe = new ModRecipe(this);
+                recipe.AddIngredient(ModContent.ItemType<Canvas>(), 1);
+                recipe.AddIngredient(ItemID.YellowPaint, 1);
+                recipe.AddTile(ModContent.TileType<EaselTile>());
+                recipe.SetResult(valhalla.ItemType("PaintingSticker"), 1);
+                recipe.AddRecipe();
+
+                recipe = new ModRecipe(this);
+                recipe.AddIngredient(ModContent.ItemType<Canvas>(), 1);
+                recipe.AddIngredient(ItemID.WhitePaint, 1);
+                recipe.AddTile(ModContent.TileType<EaselTile>());
+                recipe.SetResult(valhalla.ItemType("PaintingTundra"), 1);
+                recipe.AddRecipe();
+
+                recipe = new ModRecipe(this);
+                recipe.AddIngredient(ModContent.ItemType<Canvas>(), 1);
+                recipe.AddIngredient(ItemID.DeepSkyBluePaint, 1);
+                recipe.AddTile(ModContent.TileType<EaselTile>());
+                recipe.SetResult(valhalla.ItemType("PaintingWisp"), 1);
+                recipe.AddRecipe();
+
+                recipe = new ModRecipe(this);
+                recipe.AddIngredient(ModContent.ItemType<Canvas>(), 1);
+                recipe.AddIngredient(ItemID.BluePaint, 1);
+                recipe.AddTile(ModContent.TileType<EaselTile>());
+                recipe.SetResult(valhalla.ItemType("SeaLevel"), 1);
+                recipe.AddRecipe();
+
+                recipe = new ModRecipe(this);
+                recipe.AddIngredient(ModContent.ItemType<Canvas>(), 1);
+                recipe.AddIngredient(ItemID.DeepPurplePaint, 1);
+                recipe.AddTile(ModContent.TileType<EaselTile>());
+                recipe.SetResult(valhalla.ItemType("UnderworldsVanity"), 1);
+                recipe.AddRecipe();
+
+                recipe = new ModRecipe(this);
+                recipe.AddIngredient(ModContent.ItemType<Canvas>(), 1);
+                recipe.AddIngredient(ItemID.DeepBluePaint, 1);
+                recipe.AddTile(ModContent.TileType<EaselTile>());
+                recipe.SetResult(valhalla.ItemType("YouAreNext"), 1);
+                recipe.AddRecipe();
+            }
+            #endregion
+
+            #region Chad's Furniture Mod
+            Mod cfm = ModLoader.GetMod("chadsfurni");
+            if (cfm != null && ModContent.GetInstance<CraftablePaintingsConfigServer>().CraftModdedPaintings)
+            {
+                recipe = new ModRecipe(this);
+                recipe.AddIngredient(ModContent.ItemType<Canvas>(), 1);
+                recipe.AddIngredient(ItemID.BrownPaint, 1);
+                recipe.AddTile(ModContent.TileType<EaselTile>());
+                recipe.SetResult(cfm.ItemType("paintface"), 1);
+                recipe.AddRecipe();
+
+                recipe = new ModRecipe(this);
+                recipe.AddIngredient(ModContent.ItemType<Canvas>(), 1);
+                recipe.AddIngredient(ItemID.YellowPaint, 1);
+                recipe.AddTile(ModContent.TileType<EaselTile>());
+                recipe.SetResult(cfm.ItemType("paintflower"), 1);
+                recipe.AddRecipe();
+
+                recipe = new ModRecipe(this);
+                recipe.AddIngredient(ModContent.ItemType<Canvas>(), 1);
+                recipe.AddIngredient(ItemID.WhitePaint, 1);
+                recipe.AddTile(ModContent.TileType<EaselTile>());
+                recipe.SetResult(cfm.ItemType("paintflutelady"), 1);
+                recipe.AddRecipe();
+
+                recipe = new ModRecipe(this);
+                recipe.AddIngredient(ModContent.ItemType<Canvas>(), 1);
+                recipe.AddIngredient(ItemID.OrangePaint, 1);
+                recipe.AddTile(ModContent.TileType<EaselTile>());
+                recipe.SetResult(cfm.ItemType("paintfuckingagony"), 1);
+                recipe.AddRecipe();
+
+                recipe = new ModRecipe(this);
+                recipe.AddIngredient(ModContent.ItemType<Canvas>(), 1);
+                recipe.AddIngredient(ItemID.TealPaint, 1);
+                recipe.AddTile(ModContent.TileType<EaselTile>());
+                recipe.SetResult(cfm.ItemType("PaintFuryForged"), 1);
+                recipe.AddRecipe();
+
+                recipe = new ModRecipe(this);
+                recipe.AddIngredient(ModContent.ItemType<Canvas>(), 1);
+                recipe.AddIngredient(ItemID.GrayPaint, 1);
+                recipe.AddTile(ModContent.TileType<EaselTile>());
+                recipe.SetResult(cfm.ItemType("paintmount"), 1);
+                recipe.AddRecipe();
+
+                recipe = new ModRecipe(this);
+                recipe.AddIngredient(ModContent.ItemType<Canvas>(), 1);
+                recipe.AddIngredient(ItemID.BrownPaint, 1);
+                recipe.AddTile(ModContent.TileType<EaselTile>());
+                recipe.SetResult(cfm.ItemType("paintplant"), 1);
+                recipe.AddRecipe();
+
+                recipe = new ModRecipe(this);
+                recipe.AddIngredient(ModContent.ItemType<Canvas>(), 1);
+                recipe.AddIngredient(ItemID.PinkPaint, 1);
+                recipe.AddTile(ModContent.TileType<EaselTile>());
+                recipe.SetResult(cfm.ItemType("paintrancher"), 1);
+                recipe.AddRecipe();
+
+                recipe = new ModRecipe(this);
+                recipe.AddIngredient(ModContent.ItemType<Canvas>(), 1);
+                recipe.AddIngredient(ItemID.GreenPaint, 1);
+                recipe.AddTile(ModContent.TileType<EaselTile>());
+                recipe.SetResult(cfm.ItemType("paintree"), 1);
+                recipe.AddRecipe();
+
+                recipe = new ModRecipe(this);
+                recipe.AddIngredient(ModContent.ItemType<Canvas>(), 1);
+                recipe.AddIngredient(ItemID.BrownPaint, 1);
+                recipe.AddTile(ModContent.TileType<EaselTile>());
+                recipe.SetResult(cfm.ItemType("paintself"), 1);
+                recipe.AddRecipe();
+
+                recipe = new ModRecipe(this);
+                recipe.AddIngredient(ModContent.ItemType<Canvas>(), 1);
+                recipe.AddIngredient(ItemID.BrownPaint, 1);
+                recipe.AddTile(ModContent.TileType<EaselTile>());
+                recipe.SetResult(cfm.ItemType("paintsjaak"), 1);
+                recipe.AddRecipe();
+
+                recipe = new ModRecipe(this);
+                recipe.AddIngredient(ModContent.ItemType<Canvas>(), 1);
+                recipe.AddIngredient(ItemID.PinkPaint, 1);
+                recipe.AddTile(ModContent.TileType<EaselTile>());
+                recipe.SetResult(cfm.ItemType("paintslime"), 1);
+                recipe.AddRecipe();
+
+                recipe = new ModRecipe(this);
+                recipe.AddIngredient(ModContent.ItemType<Canvas>(), 1);
+                recipe.AddIngredient(ItemID.YellowPaint, 1);
+                recipe.AddTile(ModContent.TileType<EaselTile>());
+                recipe.SetResult(cfm.ItemType("paintsunflower"), 1);
+                recipe.AddRecipe();
+
+                recipe = new ModRecipe(this);
+                recipe.AddIngredient(ModContent.ItemType<Canvas>(), 1);
+                recipe.AddIngredient(ItemID.WhitePaint, 1);
+                recipe.AddTile(ModContent.TileType<EaselTile>());
+                recipe.SetResult(cfm.ItemType("paintveil"), 1);
+                recipe.AddRecipe();
+
+                recipe = new ModRecipe(this);
+                recipe.AddIngredient(ModContent.ItemType<Canvas>(), 1);
+                recipe.AddIngredient(ItemID.SkyBluePaint, 1);
+                recipe.AddTile(ModContent.TileType<EaselTile>());
+                recipe.SetResult(cfm.ItemType("paintwater"), 1);
+                recipe.AddRecipe();
+            }
+            #endregion
+
+            #region Minecraft Paintings
+            Mod mcp = ModLoader.GetMod("MinecraftPaintings");
+            if (mcp != null && ModContent.GetInstance<CraftablePaintingsConfigServer>().CraftModdedPaintings)
+            {
+                recipe = new ModRecipe(this);
+                recipe.AddIngredient(ModContent.ItemType<Canvas>(), 1);
+                recipe.AddIngredient(ItemID.RedPaint, 1);
+                recipe.AddTile(ModContent.TileType<EaselTile>());
+                recipe.SetResult(mcp.ItemType("DonkeyKong"), 1);
+                recipe.AddRecipe();
+
+                recipe = new ModRecipe(this);
+                recipe.AddIngredient(ModContent.ItemType<Canvas>(), 1);
+                recipe.AddIngredient(ItemID.BrownPaint, 1);
+                recipe.AddTile(ModContent.TileType<EaselTile>());
+                recipe.SetResult(mcp.ItemType("Fighters"), 1);
+                recipe.AddRecipe();
+
+                recipe = new ModRecipe(this);
+                recipe.AddIngredient(ModContent.ItemType<Canvas>(), 1);
+                recipe.AddIngredient(ItemID.WhitePaint, 1);
+                recipe.AddTile(ModContent.TileType<EaselTile>());
+                recipe.SetResult(mcp.ItemType("Skeleton"), 1);
+                recipe.AddRecipe();
+
+                recipe = new ModRecipe(this);
+                recipe.AddIngredient(ModContent.ItemType<Canvas>(), 1);
+                recipe.AddIngredient(ItemID.DeepPurplePaint, 1);
+                recipe.AddTile(ModContent.TileType<EaselTile>());
+                recipe.SetResult(mcp.ItemType("BurningSkull"), 1);
+                recipe.AddRecipe();
+
+                recipe = new ModRecipe(this);
+                recipe.AddIngredient(ModContent.ItemType<Canvas>(), 1);
+                recipe.AddIngredient(ItemID.WhitePaint, 1);
+                recipe.AddTile(ModContent.TileType<EaselTile>());
+                recipe.SetResult(mcp.ItemType("Bust"), 1);
+                recipe.AddRecipe();
+
+                recipe = new ModRecipe(this);
+                recipe.AddIngredient(ModContent.ItemType<Canvas>(), 1);
+                recipe.AddIngredient(ItemID.YellowPaint, 1);
+                recipe.AddTile(ModContent.TileType<EaselTile>());
+                recipe.SetResult(mcp.ItemType("Match"), 1);
+                recipe.AddRecipe();
+
+                recipe = new ModRecipe(this);
+                recipe.AddIngredient(ModContent.ItemType<Canvas>(), 1);
+                recipe.AddIngredient(ItemID.PinkPaint, 1);
+                recipe.AddTile(ModContent.TileType<EaselTile>());
+                recipe.SetResult(mcp.ItemType("Pigscene"), 1);
+                recipe.AddRecipe();
+
+                recipe = new ModRecipe(this);
+                recipe.AddIngredient(ModContent.ItemType<Canvas>(), 1);
+                recipe.AddIngredient(ItemID.WhitePaint, 1);
+                recipe.AddTile(ModContent.TileType<EaselTile>());
+                recipe.SetResult(mcp.ItemType("Pointer"), 1);
+                recipe.AddRecipe();
+
+                recipe = new ModRecipe(this);
+                recipe.AddIngredient(ModContent.ItemType<Canvas>(), 1);
+                recipe.AddIngredient(ItemID.SkyBluePaint, 1);
+                recipe.AddTile(ModContent.TileType<EaselTile>());
+                recipe.SetResult(mcp.ItemType("SkullAndRoses"), 1);
+                recipe.AddRecipe();
+
+                recipe = new ModRecipe(this);
+                recipe.AddIngredient(ModContent.ItemType<Canvas>(), 1);
+                recipe.AddIngredient(ItemID.BlackPaint, 1);
+                recipe.AddTile(ModContent.TileType<EaselTile>());
+                recipe.SetResult(mcp.ItemType("Stage"), 1);
+                recipe.AddRecipe();
+
+                recipe = new ModRecipe(this);
+                recipe.AddIngredient(ModContent.ItemType<Canvas>(), 1);
+                recipe.AddIngredient(ItemID.GrayPaint, 1);
+                recipe.AddTile(ModContent.TileType<EaselTile>());
+                recipe.SetResult(mcp.ItemType("Void"), 1);
+                recipe.AddRecipe();
+
+                recipe = new ModRecipe(this);
+                recipe.AddIngredient(ModContent.ItemType<Canvas>(), 1);
+                recipe.AddIngredient(ItemID.BrownPaint, 1);
+                recipe.AddTile(ModContent.TileType<EaselTile>());
+                recipe.SetResult(mcp.ItemType("Wither"), 1);
+                recipe.AddRecipe();
+
+                recipe = new ModRecipe(this);
+                recipe.AddIngredient(ModContent.ItemType<Canvas>(), 1);
+                recipe.AddIngredient(ItemID.WhitePaint, 1);
+                recipe.AddTile(ModContent.TileType<EaselTile>());
+                recipe.SetResult(mcp.ItemType("Courbet"), 1);
+                recipe.AddRecipe();
+
+                recipe = new ModRecipe(this);
+                recipe.AddIngredient(ModContent.ItemType<Canvas>(), 1);
+                recipe.AddIngredient(ItemID.GreenPaint, 1);
+                recipe.AddTile(ModContent.TileType<EaselTile>());
+                recipe.SetResult(mcp.ItemType("Creebet"), 1);
+                recipe.AddRecipe();
+
+                recipe = new ModRecipe(this);
+                recipe.AddIngredient(ModContent.ItemType<Canvas>(), 1);
+                recipe.AddIngredient(ItemID.SkyBluePaint, 1);
+                recipe.AddTile(ModContent.TileType<EaselTile>());
+                recipe.SetResult(mcp.ItemType("Pool"), 1);
+                recipe.AddRecipe();
+
+                recipe = new ModRecipe(this);
+                recipe.AddIngredient(ModContent.ItemType<Canvas>(), 1);
+                recipe.AddIngredient(ItemID.BluePaint, 1);
+                recipe.AddTile(ModContent.TileType<EaselTile>());
+                recipe.SetResult(mcp.ItemType("Sea"), 1);
+                recipe.AddRecipe();
+
+                recipe = new ModRecipe(this);
+                recipe.AddIngredient(ModContent.ItemType<Canvas>(), 1);
+                recipe.AddIngredient(ItemID.PurplePaint, 1);
+                recipe.AddTile(ModContent.TileType<EaselTile>());
+                recipe.SetResult(mcp.ItemType("Sunset"), 1);
+                recipe.AddRecipe();
+
+                recipe = new ModRecipe(this);
+                recipe.AddIngredient(ModContent.ItemType<Canvas>(), 1);
+                recipe.AddIngredient(ItemID.RedPaint, 1);
+                recipe.AddTile(ModContent.TileType<EaselTile>());
+                recipe.SetResult(mcp.ItemType("Graham"), 1);
+                recipe.AddRecipe();
+
+                recipe = new ModRecipe(this);
+                recipe.AddIngredient(ModContent.ItemType<Canvas>(), 1);
+                recipe.AddIngredient(ItemID.BlackPaint, 1);
+                recipe.AddTile(ModContent.TileType<EaselTile>());
+                recipe.SetResult(mcp.ItemType("Wanderer"), 1);
+                recipe.AddRecipe();
+
+                recipe = new ModRecipe(this);
+                recipe.AddIngredient(ModContent.ItemType<Canvas>(), 1);
+                recipe.AddIngredient(ItemID.YellowPaint, 1);
+                recipe.AddTile(ModContent.TileType<EaselTile>());
+                recipe.SetResult(mcp.ItemType("Alban"), 1);
+                recipe.AddRecipe();
+
+                recipe = new ModRecipe(this);
+                recipe.AddIngredient(ModContent.ItemType<Canvas>(), 1);
+                recipe.AddIngredient(ItemID.CyanPaint, 1);
+                recipe.AddTile(ModContent.TileType<EaselTile>());
+                recipe.SetResult(mcp.ItemType("Aztec"), 1);
+                recipe.AddRecipe();
+
+                recipe = new ModRecipe(this);
+                recipe.AddIngredient(ModContent.ItemType<Canvas>(), 1);
+                recipe.AddIngredient(ItemID.YellowPaint, 1);
+                recipe.AddTile(ModContent.TileType<EaselTile>());
+                recipe.SetResult(mcp.ItemType("Aztec2"), 1);
+                recipe.AddRecipe();
+
+                recipe = new ModRecipe(this);
+                recipe.AddIngredient(ModContent.ItemType<Canvas>(), 1);
+                recipe.AddIngredient(ItemID.YellowPaint, 1);
+                recipe.AddTile(ModContent.TileType<EaselTile>());
+                recipe.SetResult(mcp.ItemType("Bomb"), 1);
+                recipe.AddRecipe();
+
+                recipe = new ModRecipe(this);
+                recipe.AddIngredient(ModContent.ItemType<Canvas>(), 1);
+                recipe.AddIngredient(ItemID.BrownPaint, 1);
+                recipe.AddTile(ModContent.TileType<EaselTile>());
+                recipe.SetResult(mcp.ItemType("Kebab"), 1);
+                recipe.AddRecipe();
+
+                recipe = new ModRecipe(this);
+                recipe.AddIngredient(ModContent.ItemType<Canvas>(), 1);
+                recipe.AddIngredient(ItemID.GreenPaint, 1);
+                recipe.AddTile(ModContent.TileType<EaselTile>());
+                recipe.SetResult(mcp.ItemType("Plant"), 1);
+                recipe.AddRecipe();
+
+                recipe = new ModRecipe(this);
+                recipe.AddIngredient(ModContent.ItemType<Canvas>(), 1);
+                recipe.AddIngredient(ItemID.YellowPaint, 1);
+                recipe.AddTile(ModContent.TileType<EaselTile>());
+                recipe.SetResult(mcp.ItemType("Wasteland"), 1);
+                recipe.AddRecipe();
+            }
+            #endregion
         }
         public override void Unload()
         {
             Instance = null;
             ConfigServer = null;
+        }
+    }
+    //Adapted from SGAmod
+    class ParadoxGeneralPaintingRecipe : ModRecipe
+    {
+        public ParadoxGeneralPaintingRecipe(Mod mod) : base(mod)
+        {
+        }
+        public override int ConsumeItem(int type, int numRequired)
+        {
+            Mod sgamod = ModLoader.GetMod("SGAmod");
+            if (sgamod != null && ModContent.GetInstance<CraftablePaintingsConfigServer>().CraftModdedPaintings)
+            {
+                if (type == sgamod.ItemType("Nightmare"))//Hellion's Gift
+                {
+                    return 0;
+                }
+            }
+            return numRequired;
         }
     }
 }

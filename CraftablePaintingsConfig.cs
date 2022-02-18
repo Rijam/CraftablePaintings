@@ -34,10 +34,10 @@ namespace CraftablePaintings
 			"  When Off: All modded paintings WILL NOT be craftable.\n" +
 			"    Turn Off in case of a mod conflict or you are getting\n" +
 			"    errors stating that a recipe has no result.\n" +
-			"Default value: On\n" +
+			"Default value: Off\n" +
 			"Reload required.")]
 		[ReloadRequired]
-		[DefaultValue(true)]
+		[DefaultValue(false)]
 		public bool CraftModdedPaintings { get; set; }
 
 		/* Not written by Rijam*/
