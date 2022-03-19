@@ -8,3 +8,5 @@ Some paintings require an extra ingredient based on their progression.
 
 Includes paintings from:
 	Fargo's Mutant Mod
+
+Modded painting recipes must first be enabled in the config!
