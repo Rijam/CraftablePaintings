@@ -1,7 +1,7 @@
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
-//using Terraria.GameContent.Creative;
+using Terraria.GameContent.Creative;
 
 namespace CraftablePaintings.Items
 {
@@ -11,7 +11,7 @@ namespace CraftablePaintings.Items
 		{
 			DisplayName.SetDefault("Easel");
 			Tooltip.SetDefault("Used to craft paintings");
-			//CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
+			CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
 		}
 		public override void SetDefaults()
 		{
