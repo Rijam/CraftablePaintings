@@ -1,6 +1,7 @@
 using System.ComponentModel;
 using Terraria;
 using Terraria.ID;
+using Terraria.Localization;
 using Terraria.ModLoader;
 using Terraria.ModLoader.Config;
 
@@ -15,15 +16,9 @@ namespace CraftablePaintings
 	{
 		public override ConfigScope Mode => ConfigScope.ServerSide;
 
-		[Header("[c/00FF00:Server Options]")]
-		[Label("[i:3122]   Craft Modded Paintings")]
-		[Tooltip("This option toggles if paintings from the supported mods can be crafted.\n" +
-			"  When On: All modded paintings WILL be craftable.\n" +
-			"  When Off: All modded paintings WILL NOT be craftable.\n" +
-			"    Turn Off in case of a mod conflict or you are getting\n" +
-			"    errors stating that a recipe has no result.\n" +
-			"Default value: Off\n" +
-			"Reload required.")]
+		[Header("$Mods.CraftablePaintings.Config.Server.Header")]
+		[Label("$Mods.CraftablePaintings.Config.Server.LabelGeneral1")]
+		[Tooltip("$Mods.CraftablePaintings.Config.Server.TooltipGeneral1")]
 		[ReloadRequired]
 		[DefaultValue(false)]
 		public bool CraftModdedPaintings { get; set; }
@@ -56,7 +51,7 @@ namespace CraftablePaintings
 
 			if (!IsPlayerLocalServerOwner(whoAmI))
 			{
-				message = "You are not the server owner so you can not change this config!";
+				message = Language.GetTextValue("Mods.CraftablePaintings.NPCDialog.Config.Server.MultiplayerMessage");
 				return false;
 			}
 			return base.AcceptClientChanges(pendingConfig, whoAmI, ref message);

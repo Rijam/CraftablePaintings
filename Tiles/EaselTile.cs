@@ -20,9 +20,7 @@ namespace CraftablePaintings.Tiles
 			TileObjectData.newTile.Origin = new Point16(1, 2);
 			TileObjectData.newTile.CoordinateHeights = new[] { 16, 16, 16 };
 			TileObjectData.addTile(Type);
-			ModTranslation name = CreateMapEntryName();
-			name.SetDefault("Easel");
-			AddMapEntry(new Color(148, 148, 94), name);
+			AddMapEntry(new Color(148, 148, 94), Language.GetText("Mods.CraftablePaintings.MapObject.EaselTile"));
 		}
 
 		public override void KillMultiTile(int i, int j, int frameX, int frameY)

@@ -1,4 +1,4 @@
-[c/0080ff:Craft paintings with this mod!]
+[b] Craft paintings with this mod! [/b]
 
 Create Canvas from Silk or Hay at a Loom
 Create an Easel from Wood, Canvas, and a Paint Brush at a Sawmill.

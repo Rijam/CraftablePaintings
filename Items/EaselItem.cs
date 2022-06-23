@@ -9,8 +9,6 @@ namespace CraftablePaintings.Items
 	{
 		public override void SetStaticDefaults()
 		{
-			DisplayName.SetDefault("Easel");
-			Tooltip.SetDefault("Used to craft paintings");
 			CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
 		}
 		public override void SetDefaults()

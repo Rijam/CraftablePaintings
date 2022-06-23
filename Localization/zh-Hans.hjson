@@ -1,0 +1,25 @@
+﻿// Language: zh-Hans (Chinese)
+
+
+Mods: {
+	CraftablePaintings: {
+		Config: {
+			Server : {
+				LabelGeneral1: "[i:3122]   工艺修改绘画"
+			}
+		}
+		ItemName: {
+			EaselItem: 画架
+			Canvas: 帆布
+		}
+		ItemTooltip: {
+			EaselItem: 用于制作绘画
+		}
+		TileName: {
+			EaselTile: "{$Mods.CraftablePaintings.ItemName.EaselItem}"
+		}
+		MapObject: {
+			EaselTile: "{$Mods.CraftablePaintings.ItemName.EaselItem}"
+		}
+	}
+}
