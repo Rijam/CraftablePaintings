@@ -756,50 +756,52 @@ namespace CraftablePaintings
                 .Register();
             #endregion
 
+            bool craftModdedPaintings = ModContent.GetInstance<CraftablePaintingsConfigServer>().CraftModdedPaintings;
+
             #region SGAmod (Disabled)
             /*Mod sgamod = ModLoader.GetMod("SGAmod");
             if (sgamod != null && ModContent.GetInstance<CraftablePaintingsConfigServer>().CraftModdedPaintings)
             {
-                Mod.CreateRecipe(ItemID.GolfPainting1);
+                Recipe.Create(ItemID.GolfPainting1);
                     .AddIngredient(ModContent.ItemType<Canvas>());
                     .AddIngredient(ItemID.GreenPaint);
                     .AddTile(ModContent.TileType<EaselTile>());
-                    .SetResult(sgamod.ItemType("DergPainting"));
+                    .SetResult(sgamod.Find<ModItem>("DergPainting"));
                     .Register();
 
-                Mod.CreateRecipe(ItemID.GolfPainting1);
+                Recipe.Create(ItemID.GolfPainting1);
                     .AddIngredient(ModContent.ItemType<Canvas>());
                     .AddIngredient(ItemID.LimePaint);
                     .AddTile(ModContent.TileType<EaselTile>());
-                    .SetResult(sgamod.ItemType("CalmnessPainting"));
+                    .SetResult(sgamod.Find<ModItem>("CalmnessPainting"));
                     .Register();
 
-                Mod.CreateRecipe(ItemID.GolfPainting1);
+                Recipe.Create(ItemID.GolfPainting1);
                     .AddIngredient(ModContent.ItemType<Canvas>());
                     .AddIngredient(ItemID.YellowPaint);
                     .AddTile(ModContent.TileType<EaselTile>());
-                    .SetResult(sgamod.ItemType("MeetingTheSunPainting"));
+                    .SetResult(sgamod.Find<ModItem>("MeetingTheSunPainting"));
                     .Register();
 
-                Mod.CreateRecipe(ItemID.GolfPainting1);
+                Recipe.Create(ItemID.GolfPainting1);
                     .AddIngredient(ModContent.ItemType<Canvas>());
                     .AddIngredient(ItemID.SkyBluePaint);
                     .AddTile(ModContent.TileType<EaselTile>());
-                    .SetResult(sgamod.ItemType("AdventurePainting"));
+                    .SetResult(sgamod.Find<ModItem>("AdventurePainting"));
                     .Register();
 
-                Mod.CreateRecipe(ItemID.GolfPainting1);
+                Recipe.Create(ItemID.GolfPainting1);
                     .AddIngredient(ModContent.ItemType<Canvas>());
                     .AddIngredient(ItemID.WhitePaint);
                     .AddTile(ModContent.TileType<EaselTile>());
-                    .SetResult(sgamod.ItemType("SerenityPainting"));
+                    .SetResult(sgamod.Find<ModItem>("SerenityPainting"));
                     .Register();
 
-                Mod.CreateRecipe(ItemID.GolfPainting1);
+                Recipe.Create(ItemID.GolfPainting1);
                     .AddIngredient(ModContent.ItemType<Canvas>());
                     .AddIngredient(ItemID.GreenPaint);
                     .AddTile(ModContent.TileType<EaselTile>());
-                    .SetResult(sgamod.ItemType("UnderTheWaterfallPainting"));
+                    .SetResult(sgamod.Find<ModItem>("UnderTheWaterfallPainting"));
                     .Register();
             }*/
             #endregion
@@ -808,12 +810,12 @@ namespace CraftablePaintings
             /*Mod polarities = ModLoader.GetMod("Polarities");
             if (polarities != null && ModContent.GetInstance<CraftablePaintingsConfigServer>().CraftModdedPaintings)
             {
-                Mod.CreateRecipe(ItemID.GolfPainting1);
+                Recipe.Create(ItemID.GolfPainting1);
                     .AddIngredient(ModContent.ItemType<Canvas>());
                     .AddIngredient(ItemID.CyanPaint);
-                    .AddIngredient(polarities.ItemType("FractalStrands"));
+                    .AddIngredient(polarities.Find<ModItem>("FractalStrands"));
                     .AddTile(ModContent.TileType<EaselTile>());
-                    .SetResult(polarities.ItemType("WarpedLandscape"));
+                    .SetResult(polarities.Find<ModItem>("WarpedLandscape"));
                     .Register();
             }*/
             #endregion
@@ -822,416 +824,428 @@ namespace CraftablePaintings
             /*Mod thorium = ModLoader.GetMod("ThoriumMod");
             if (thorium != null && ModContent.GetInstance<CraftablePaintingsConfigServer>().CraftModdedPaintings)
             {
-                Mod.CreateRecipe(ItemID.GolfPainting1);
+                Recipe.Create(ItemID.GolfPainting1);
                     .AddIngredient(ModContent.ItemType<Canvas>());
                     .AddIngredient(ItemID.DeepRedPaint);
                     .AddTile(ModContent.TileType<EaselTile>());
-                    .SetResult(thorium.ItemType("AToastPaint"));
+                    .SetResult(thorium.Find<ModItem>("AToastPaint"));
                     .Register();
 
-                Mod.CreateRecipe(ItemID.GolfPainting1);
+                Recipe.Create(ItemID.GolfPainting1);
                     .AddIngredient(ModContent.ItemType<Canvas>());
                     .AddIngredient(ItemID.DeepTealPaint);
                     .AddTile(ModContent.TileType<EaselTile>());
-                    .SetResult(thorium.ItemType("AquaticParadisePaint"));
+                    .SetResult(thorium.Find<ModItem>("AquaticParadisePaint"));
                     .Register();
 
-                Mod.CreateRecipe(ItemID.GolfPainting1);
+                Recipe.Create(ItemID.GolfPainting1);
                     .AddIngredient(ModContent.ItemType<Canvas>());
                     .AddIngredient(ItemID.DeepTealPaint);
                     .AddIngredient(ItemID.SoulofLight);
                     .AddTile(ModContent.TileType<EaselTile>());
-                    .SetResult(thorium.ItemType("CuriousSeaLifePaint"));
+                    .SetResult(thorium.Find<ModItem>("CuriousSeaLifePaint"));
                     .Register();
 
-                Mod.CreateRecipe(ItemID.GolfPainting1);
+                Recipe.Create(ItemID.GolfPainting1);
                     .AddIngredient(ModContent.ItemType<Canvas>());
                     .AddIngredient(ItemID.DeepPurplePaint);
                     .AddIngredient(ItemID.SoulofNight);
                     .AddTile(ModContent.TileType<EaselTile>());
-                    .SetResult(thorium.ItemType("CursedHarvestPaint"));
+                    .SetResult(thorium.Find<ModItem>("CursedHarvestPaint"));
                     .Register();
 
-                Mod.CreateRecipe(ItemID.GolfPainting1);
+                Recipe.Create(ItemID.GolfPainting1);
                     .AddIngredient(ModContent.ItemType<Canvas>());
                     .AddIngredient(ItemID.DeepBluePaint);
                     .AddIngredient(ItemID.Bone);
                     .AddTile(ModContent.TileType<EaselTile>());
-                    .SetResult(thorium.ItemType("EarthenEnergyPaint"));
+                    .SetResult(thorium.Find<ModItem>("EarthenEnergyPaint"));
                     .Register();
 
-                Mod.CreateRecipe(ItemID.GolfPainting1);
+                Recipe.Create(ItemID.GolfPainting1);
                     .AddIngredient(ModContent.ItemType<Canvas>());
                     .AddIngredient(ItemID.YellowPaint);
                     .AddTile(ModContent.TileType<EaselTile>());
-                    .SetResult(thorium.ItemType("JellyintheWaterPaint"));
+                    .SetResult(thorium.Find<ModItem>("JellyintheWaterPaint"));
                     .Register();
 
-                Mod.CreateRecipe(ItemID.GolfPainting1);
+                Recipe.Create(ItemID.GolfPainting1);
                     .AddIngredient(ModContent.ItemType<Canvas>());
                     .AddIngredient(ItemID.DeepBluePaint);
                     .AddTile(ModContent.TileType<EaselTile>());
-                    .SetResult(thorium.ItemType("JollyRogerPaint"));
+                    .SetResult(thorium.Find<ModItem>("JollyRogerPaint"));
                     .Register();
 
-                Mod.CreateRecipe(ItemID.GolfPainting1);
+                Recipe.Create(ItemID.GolfPainting1);
                     .AddIngredient(ModContent.ItemType<Canvas>());
                     .AddIngredient(ItemID.DeepTealPaint);
                     .AddTile(ModContent.TileType<EaselTile>());
-                    .SetResult(thorium.ItemType("LastSupperPaint"));
+                    .SetResult(thorium.Find<ModItem>("LastSupperPaint"));
                     .Register();
 
-                Mod.CreateRecipe(ItemID.GolfPainting1);
+                Recipe.Create(ItemID.GolfPainting1);
                     .AddIngredient(ModContent.ItemType<Canvas>());
                     .AddIngredient(ItemID.GrayPaint);
                     .AddIngredient(ItemID.Bone);
                     .AddTile(ModContent.TileType<EaselTile>());
-                    .SetResult(thorium.ItemType("LoudFootstepsPaint"));
+                    .SetResult(thorium.Find<ModItem>("LoudFootstepsPaint"));
                     .Register();
 
-                Mod.CreateRecipe(ItemID.GolfPainting1);
+                Recipe.Create(ItemID.GolfPainting1);
                     .AddIngredient(ModContent.ItemType<Canvas>());
                     .AddIngredient(ItemID.DeepRedPaint);
                     .AddTile(ModContent.TileType<EaselTile>());
-                    .SetResult(thorium.ItemType("RedMistPaint"));
+                    .SetResult(thorium.Find<ModItem>("RedMistPaint"));
                     .Register();
 
-                Mod.CreateRecipe(ItemID.GolfPainting1);
+                Recipe.Create(ItemID.GolfPainting1);
                     .AddIngredient(ModContent.ItemType<Canvas>());
                     .AddIngredient(ItemID.GrayPaint);
                     .AddTile(ModContent.TileType<EaselTile>());
-                    .SetResult(thorium.ItemType("ShroudedbytheStormPaint"));
+                    .SetResult(thorium.Find<ModItem>("ShroudedbytheStormPaint"));
                     .Register();
 
-                Mod.CreateRecipe(ItemID.GolfPainting1);
+                Recipe.Create(ItemID.GolfPainting1);
                     .AddIngredient(ModContent.ItemType<Canvas>());
                     .AddIngredient(ItemID.CyanPaint);
                     .AddIngredient(ItemID.Ectoplasm);
                     .AddTile(ModContent.TileType<EaselTile>());
-                    .SetResult(thorium.ItemType("SpectralSymphonyPaint"));
+                    .SetResult(thorium.Find<ModItem>("SpectralSymphonyPaint"));
                     .Register();
 
-                Mod.CreateRecipe(ItemID.GolfPainting1);
+                Recipe.Create(ItemID.GolfPainting1);
                     .AddIngredient(ModContent.ItemType<Canvas>());
                     .AddIngredient(ItemID.OrangePaint);
                     .AddTile(ModContent.TileType<EaselTile>());
-                    .SetResult(thorium.ItemType("PumpkinPaint"));
+                    .SetResult(thorium.Find<ModItem>("PumpkinPaint"));
                     .Register();
 
-                Mod.CreateRecipe(ItemID.GolfPainting1);
+                Recipe.Create(ItemID.GolfPainting1);
                     .AddIngredient(ModContent.ItemType<Canvas>());
                     .AddIngredient(ItemID.GrayPaint);
                     .AddTile(ModContent.TileType<EaselTile>());
-                    .SetResult(thorium.ItemType("TheFoggyFiferPaint"));
+                    .SetResult(thorium.Find<ModItem>("TheFoggyFiferPaint"));
                     .Register();
 
-                Mod.CreateRecipe(ItemID.GolfPainting1);
+                Recipe.Create(ItemID.GolfPainting1);
                     .AddIngredient(ModContent.ItemType<Canvas>());
                     .AddIngredient(ItemID.GrayPaint);
                     .AddTile(ModContent.TileType<EaselTile>());
-                    .SetResult(thorium.ItemType("ThunderOverDesertSkiesPaint"));
+                    .SetResult(thorium.Find<ModItem>("ThunderOverDesertSkiesPaint"));
                     .Register();
 
-                Mod.CreateRecipe(ItemID.GolfPainting1);
+                Recipe.Create(ItemID.GolfPainting1);
                     .AddIngredient(ModContent.ItemType<Canvas>());
                     .AddIngredient(ItemID.DeepVioletPaint);
                     .AddIngredient(ItemID.LunarOre);
                     .AddTile(ModContent.TileType<EaselTile>());
-                    .SetResult(thorium.ItemType("TitanicTrioPaint"));
+                    .SetResult(thorium.Find<ModItem>("TitanicTrioPaint"));
                     .Register();
 
-                Mod.CreateRecipe(ItemID.GolfPainting1);
+                Recipe.Create(ItemID.GolfPainting1);
                     .AddIngredient(ModContent.ItemType<Canvas>());
                     .AddIngredient(ItemID.BluePaint);
                     .AddTile(ModContent.TileType<EaselTile>());
-                    .SetResult(thorium.ItemType("UnderseaBountyPaint"));
+                    .SetResult(thorium.Find<ModItem>("UnderseaBountyPaint"));
                     .Register();
 
-                Mod.CreateRecipe(ItemID.GolfPainting1);
+                Recipe.Create(ItemID.GolfPainting1);
                     .AddIngredient(ModContent.ItemType<Canvas>());
                     .AddIngredient(ItemID.WhitePaint);
                     .AddTile(ModContent.TileType<EaselTile>());
-                    .SetResult(thorium.ItemType("UnspokenPain"));
+                    .SetResult(thorium.Find<ModItem>("UnspokenPain"));
                     .Register();
 
-                Mod.CreateRecipe(ItemID.GolfPainting1);
+                Recipe.Create(ItemID.GolfPainting1);
                     .AddIngredient(ModContent.ItemType<Canvas>());
                     .AddIngredient(ItemID.GrayPaint);
                     .AddTile(ModContent.TileType<EaselTile>());
-                    .SetResult(thorium.ItemType("GrayDPaintingItem"));
+                    .SetResult(thorium.Find<ModItem>("GrayDPaintingItem"));
                     .Register();
             }*/
             #endregion
 
-            #region Calamity's Vanities (Disabled)
-            /*Mod calvalex = ModLoader.GetMod("CalValEX");
-            if (calvalex != null && ModContent.GetInstance<CraftablePaintingsConfigServer>().CraftModdedPaintings)
+            #region Calamity's Vanities
+            if (ModLoader.TryGetMod("CalValEX", out Mod calvalex) && craftModdedPaintings)
             {
-                Mod.CreateRecipe(ItemID.GolfPainting1);
-                    .AddIngredient(ModContent.ItemType<Canvas>());
-                    .AddIngredient(ItemID.LimePaint);
-                    .AddTile(ModContent.TileType<EaselTile>());
-                    .SetResult(calvalex.ItemType("Plague22"));
+                Recipe.Create(calvalex.Find<ModItem>("AccidentalAbominationn").Type)
+                    .AddIngredient(ModContent.ItemType<Canvas>())
+                    .AddIngredient(ItemID.BrownPaint)
+                    .AddTile(ModContent.TileType<EaselTile>())
                     .Register();
 
-                Mod.CreateRecipe(ItemID.GolfPainting1);
-                    .AddIngredient(ModContent.ItemType<Canvas>());
-                    .AddIngredient(ItemID.VioletPaint);
-                    .AddTile(ModContent.TileType<EaselTile>());
-                    .SetResult(calvalex.ItemType("CirrusBooze"));
+                Recipe.Create(calvalex.Find<ModItem>("BlazingConflict").Type)
+                    .AddIngredient(ModContent.ItemType<Canvas>())
+                    .AddIngredient(ItemID.OrangePaint)
+                    .AddTile(ModContent.TileType<EaselTile>())
                     .Register();
 
-                Mod.CreateRecipe(ItemID.GolfPainting1);
-                    .AddIngredient(ModContent.ItemType<Canvas>());
-                    .AddIngredient(ItemID.GreenPaint);
-                    .AddTile(ModContent.TileType<EaselTile>());
-                    .SetResult(calvalex.ItemType("SundayAfternoon"));
+                Recipe.Create(calvalex.Find<ModItem>("CalamiteaTime").Type)
+                    .AddIngredient(ModContent.ItemType<Canvas>())
+                    .AddIngredient(ItemID.LimePaint)
+                    .AddTile(ModContent.TileType<EaselTile>())
                     .Register();
 
-                Mod.CreateRecipe(ItemID.GolfPainting1);
-                    .AddIngredient(ModContent.ItemType<Canvas>());
-                    .AddIngredient(ItemID.BrownPaint);
-                    .AddTile(ModContent.TileType<EaselTile>());
-                    .SetResult(calvalex.ItemType("AccidentalAbominationn"));
+                Recipe.Create(calvalex.Find<ModItem>("CalamityFriends").Type)
+                    .AddIngredient(ModContent.ItemType<Canvas>())
+                    .AddIngredient(ItemID.YellowPaint)
+                    .AddTile(ModContent.TileType<EaselTile>())
                     .Register();
 
-                Mod.CreateRecipe(ItemID.GolfPainting1);
-                    .AddIngredient(ModContent.ItemType<Canvas>());
-                    .AddIngredient(ItemID.BluePaint);
-                    .AddTile(ModContent.TileType<EaselTile>());
-                    .SetResult(calvalex.ItemType("SwearingShroom"));
+                Recipe.Create(calvalex.Find<ModItem>("CalamityPaint").Type)
+                    .AddIngredient(ModContent.ItemType<Canvas>())
+                    .AddIngredient(ItemID.RedPaint)
+                    .AddTile(ModContent.TileType<EaselTile>())
                     .Register();
 
-                Mod.CreateRecipe(ItemID.GolfPainting1);
-                    .AddIngredient(ModContent.ItemType<Canvas>());
-                    .AddIngredient(ItemID.OrangePaint);
-                    .AddTile(ModContent.TileType<EaselTile>());
-                    .SetResult(calvalex.ItemType("BlazingConflict"));
+                Recipe.Create(calvalex.Find<ModItem>("CalamityPaintRetold").Type)
+                    .AddIngredient(ModContent.ItemType<Canvas>())
+                    .AddIngredient(ItemID.YellowPaint)
+                    .AddTile(ModContent.TileType<EaselTile>())
                     .Register();
 
-                Mod.CreateRecipe(ItemID.GolfPainting1);
-                    .AddIngredient(ModContent.ItemType<Canvas>());
-                    .AddIngredient(ItemID.LimePaint);
-                    .AddTile(ModContent.TileType<EaselTile>());
-                    .SetResult(calvalex.ItemType("CalamiteaTime"));
+                Recipe.Create(calvalex.Find<ModItem>("CirrusBooze").Type)
+                    .AddIngredient(ModContent.ItemType<Canvas>())
+                    .AddIngredient(ItemID.VioletPaint)
+                    .AddTile(ModContent.TileType<EaselTile>())
                     .Register();
 
-                Mod.CreateRecipe(ItemID.GolfPainting1);
-                    .AddIngredient(ModContent.ItemType<Canvas>());
-                    .AddIngredient(ItemID.GrayPaint);
-                    .AddTile(ModContent.TileType<EaselTile>());
-                    .SetResult(calvalex.ItemType("Yharlamitas"));
+                Recipe.Create(calvalex.Find<ModItem>("Clam").Type)
+                    .AddIngredient(ModContent.ItemType<Canvas>())
+                    .AddIngredient(ItemID.BrownPaint)
+                    .AddTile(ModContent.TileType<EaselTile>())
                     .Register();
 
-                Mod.CreateRecipe(ItemID.GolfPainting1);
-                    .AddIngredient(ModContent.ItemType<Canvas>());
-                    .AddIngredient(ItemID.RedPaint);
-                    .AddTile(ModContent.TileType<EaselTile>());
-                    .SetResult(calvalex.ItemType("ModIconPainting"));
+                Recipe.Create(calvalex.Find<ModItem>("CosmicTerror").Type)
+                    .AddIngredient(ModContent.ItemType<Canvas>())
+                    .AddIngredient(ItemID.VioletPaint)
+                    .AddTile(ModContent.TileType<EaselTile>())
                     .Register();
 
-                Mod.CreateRecipe(ItemID.GolfPainting1);
-                    .AddIngredient(ModContent.ItemType<Canvas>());
-                    .AddIngredient(ItemID.RedPaint);
-                    .AddTile(ModContent.TileType<EaselTile>());
-                    .SetResult(calvalex.ItemType("WilliamPainting"));
+                Recipe.Create(calvalex.Find<ModItem>("DarkMagic").Type)
+                    .AddIngredient(ModContent.ItemType<Canvas>())
+                    .AddIngredient(ItemID.BrownPaint)
+                    .AddTile(ModContent.TileType<EaselTile>())
                     .Register();
 
-                Mod.CreateRecipe(ItemID.GolfPainting1);
-                    .AddIngredient(ModContent.ItemType<Canvas>());
-                    .AddIngredient(ItemID.VioletPaint);
-                    .AddTile(ModContent.TileType<EaselTile>());
-                    .SetResult(calvalex.ItemType("CosmicTerror"));
+                Recipe.Create(calvalex.Find<ModItem>("DraedonPopcorn").Type)
+                    .AddIngredient(ModContent.ItemType<Canvas>())
+                    .AddIngredient(ItemID.BrownPaint)
+                    .AddTile(ModContent.TileType<EaselTile>())
                     .Register();
 
-                Mod.CreateRecipe(ItemID.GolfPainting1);
-                    .AddIngredient(ModContent.ItemType<Canvas>());
-                    .AddIngredient(ItemID.BrownPaint);
-                    .AddTile(ModContent.TileType<EaselTile>());
-                    .SetResult(calvalex.ItemType("DarkMagic"));
+                Recipe.Create(calvalex.Find<ModItem>("Duality").Type)
+                    .AddIngredient(ModContent.ItemType<Canvas>())
+                    .AddIngredient(ItemID.DeepPurplePaint)
+                    .AddTile(ModContent.TileType<EaselTile>())
                     .Register();
 
-                Mod.CreateRecipe(ItemID.GolfPainting1);
-                    .AddIngredient(ModContent.ItemType<Canvas>());
-                    .AddIngredient(ItemID.DeepPurplePaint);
-                    .AddTile(ModContent.TileType<EaselTile>());
-                    .SetResult(calvalex.ItemType("Duality"));
+                Recipe.Create(calvalex.Find<ModItem>("Espelho").Type)
+                    .AddIngredient(ModContent.ItemType<Canvas>())
+                    .AddIngredient(ItemID.DeepVioletPaint)
+                    .AddTile(ModContent.TileType<EaselTile>())
                     .Register();
 
-                Mod.CreateRecipe(ItemID.GolfPainting1);
-                    .AddIngredient(ModContent.ItemType<Canvas>());
-                    .AddIngredient(ItemID.DeepVioletPaint);
-                    .AddTile(ModContent.TileType<EaselTile>());
-                    .SetResult(calvalex.ItemType("Espelho"));
+                Recipe.Create(calvalex.Find<ModItem>("EyeofXeroc").Type)
+                    .AddIngredient(ModContent.ItemType<Canvas>())
+                    .AddIngredient(ItemID.DeepVioletPaint)
+                    .AddTile(ModContent.TileType<EaselTile>())
                     .Register();
 
-                Mod.CreateRecipe(ItemID.GolfPainting1);
-                    .AddIngredient(ModContent.ItemType<Canvas>());
-                    .AddIngredient(ItemID.DeepSkyBluePaint);
-                    .AddTile(ModContent.TileType<EaselTile>());
-                    .SetResult(calvalex.ItemType("Frozen"));
+                Recipe.Create(calvalex.Find<ModItem>("Frozen").Type)
+                    .AddIngredient(ModContent.ItemType<Canvas>())
+                    .AddIngredient(ItemID.DeepSkyBluePaint)
+                    .AddTile(ModContent.TileType<EaselTile>())
                     .Register();
 
-                Mod.CreateRecipe(ItemID.GolfPainting1);
-                    .AddIngredient(ModContent.ItemType<Canvas>());
-                    .AddIngredient(ItemID.YellowPaint);
-                    .AddTile(ModContent.TileType<EaselTile>());
-                    .SetResult(calvalex.ItemType("CalamityFriends"));
+                Recipe.Create(calvalex.Find<ModItem>("LostSouls").Type)
+                    .AddIngredient(ModContent.ItemType<Canvas>())
+                    .AddIngredient(ItemID.SkyBluePaint)
+                    .AddTile(ModContent.TileType<EaselTile>())
                     .Register();
 
-                Mod.CreateRecipe(ItemID.GolfPainting1);
-                    .AddIngredient(ModContent.ItemType<Canvas>());
-                    .AddIngredient(ItemID.SkyBluePaint);
-                    .AddTile(ModContent.TileType<EaselTile>());
-                    .SetResult(calvalex.ItemType("LostSouls"));
+                Recipe.Create(calvalex.Find<ModItem>("ModIconPainting").Type)
+                    .AddIngredient(ModContent.ItemType<Canvas>())
+                    .AddIngredient(ItemID.VioletPaint)
+                    .AddTile(ModContent.TileType<EaselTile>())
                     .Register();
 
-                Mod.CreateRecipe(ItemID.GolfPainting1);
-                    .AddIngredient(ModContent.ItemType<Canvas>());
-                    .AddIngredient(ItemID.DeepBluePaint);
-                    .AddTile(ModContent.TileType<EaselTile>());
-                    .SetResult(calvalex.ItemType("NotLikeHome"));
+                Recipe.Create(calvalex.Find<ModItem>("NotLikeHome").Type)
+                    .AddIngredient(ModContent.ItemType<Canvas>())
+                    .AddIngredient(ItemID.DeepBluePaint)
+                    .AddTile(ModContent.TileType<EaselTile>())
                     .Register();
 
-                Mod.CreateRecipe(ItemID.GolfPainting1);
-                    .AddIngredient(ModContent.ItemType<Canvas>());
-                    .AddIngredient(ItemID.BrownPaint);
-                    .AddTile(ModContent.TileType<EaselTile>());
-                    .SetResult(calvalex.ItemType("Clam"));
+                Recipe.Create(calvalex.Find<ModItem>("OldModIconPainting").Type)
+                    .AddIngredient(ModContent.ItemType<Canvas>())
+                    .AddIngredient(ItemID.RedPaint)
+                    .AddTile(ModContent.TileType<EaselTile>())
                     .Register();
 
-                Mod.CreateRecipe(ItemID.GolfPainting1);
-                    .AddIngredient(ModContent.ItemType<Canvas>());
-                    .AddIngredient(ItemID.VioletPaint);
-                    .AddTile(ModContent.TileType<EaselTile>());
-                    .SetResult(calvalex.ItemType("RogueExtractor"));
+                Recipe.Create(calvalex.Find<ModItem>("OldUCMMPainting").Type)
+                    .AddIngredient(ModContent.ItemType<Canvas>())
+                    .AddIngredient(ItemID.RedPaint)
+                    .AddTile(ModContent.TileType<EaselTile>())
                     .Register();
 
-                Mod.CreateRecipe(ItemID.GolfPainting1);
-                    .AddIngredient(ModContent.ItemType<Canvas>());
-                    .AddIngredient(ItemID.TealPaint);
-                    .AddTile(ModContent.TileType<EaselTile>());
-                    .SetResult(calvalex.ItemType("Scourgy"));
+                Recipe.Create(calvalex.Find<ModItem>("Plague22").Type)
+                    .AddIngredient(ModContent.ItemType<Canvas>())
+                    .AddIngredient(ItemID.LimePaint)
+                    .AddTile(ModContent.TileType<EaselTile>())
                     .Register();
 
-                Mod.CreateRecipe(ItemID.GolfPainting1);
-                    .AddIngredient(ModContent.ItemType<Canvas>());
-                    .AddIngredient(ItemID.PurplePaint);
-                    .AddTile(ModContent.TileType<EaselTile>());
-                    .SetResult(calvalex.ItemType("Signut"));
+                Recipe.Create(calvalex.Find<ModItem>("RogueExtractor").Type)
+                    .AddIngredient(ModContent.ItemType<Canvas>())
+                    .AddIngredient(ItemID.VioletPaint)
+                    .AddTile(ModContent.TileType<EaselTile>())
                     .Register();
 
-                Mod.CreateRecipe(ItemID.GolfPainting1);
-                    .AddIngredient(ModContent.ItemType<Canvas>());
-                    .AddIngredient(ItemID.TealPaint);
-                    .AddTile(ModContent.TileType<EaselTile>());
-                    .SetResult(calvalex.ItemType("SleepingGiant"));
+                Recipe.Create(calvalex.Find<ModItem>("Scourgy").Type)
+                    .AddIngredient(ModContent.ItemType<Canvas>())
+                    .AddIngredient(ItemID.TealPaint)
+                    .AddTile(ModContent.TileType<EaselTile>())
                     .Register();
 
-                Mod.CreateRecipe(ItemID.GolfPainting1);
-                    .AddIngredient(ModContent.ItemType<Canvas>());
-                    .AddIngredient(ItemID.TealPaint);
-                    .AddTile(ModContent.TileType<EaselTile>());
-                    .SetResult(calvalex.ItemType("Snouts"));
+                Recipe.Create(calvalex.Find<ModItem>("Signut").Type)
+                    .AddIngredient(ModContent.ItemType<Canvas>())
+                    .AddIngredient(ItemID.PurplePaint)
+                    .AddTile(ModContent.TileType<EaselTile>())
                     .Register();
 
-                Mod.CreateRecipe(ItemID.GolfPainting1);
-                    .AddIngredient(ModContent.ItemType<Canvas>());
-                    .AddIngredient(ItemID.BrownPaint);
-                    .AddTile(ModContent.TileType<EaselTile>());
-                    .SetResult(calvalex.ItemType("TheGreatSandworm"));
+                Recipe.Create(calvalex.Find<ModItem>("SleepingGiant").Type)
+                    .AddIngredient(ModContent.ItemType<Canvas>())
+                    .AddIngredient(ItemID.TealPaint)
+                    .AddTile(ModContent.TileType<EaselTile>())
                     .Register();
 
-                Mod.CreateRecipe(ItemID.GolfPainting1);
-                    .AddIngredient(ModContent.ItemType<Canvas>());
-                    .AddIngredient(ItemID.YellowPaint);
-                    .AddTile(ModContent.TileType<EaselTile>());
-                    .SetResult(calvalex.ItemType("TheYhar"));
+                Recipe.Create(calvalex.Find<ModItem>("Snouts").Type)
+                    .AddIngredient(ModContent.ItemType<Canvas>())
+                    .AddIngredient(ItemID.TealPaint)
+                    .AddTile(ModContent.TileType<EaselTile>())
                     .Register();
 
-                Mod.CreateRecipe(ItemID.GolfPainting1);
-                    .AddIngredient(ModContent.ItemType<Canvas>());
-                    .AddIngredient(ItemID.TealPaint);
-                    .AddTile(ModContent.TileType<EaselTile>());
-                    .SetResult(calvalex.ItemType("UnholyTrip"));
+                Recipe.Create(calvalex.Find<ModItem>("SundayAfternoon").Type)
+                    .AddIngredient(ModContent.ItemType<Canvas>())
+                    .AddIngredient(ItemID.GreenPaint)
+                    .AddTile(ModContent.TileType<EaselTile>())
                     .Register();
 
-                Mod.CreateRecipe(ItemID.GolfPainting1);
-                    .AddIngredient(ModContent.ItemType<Canvas>());
-                    .AddIngredient(ItemID.RedPaint);
-                    .AddTile(ModContent.TileType<EaselTile>());
-                    .SetResult(calvalex.ItemType("VVanities"));
+                Recipe.Create(calvalex.Find<ModItem>("SwearingShroom").Type)
+                    .AddIngredient(ModContent.ItemType<Canvas>())
+                    .AddIngredient(ItemID.BluePaint)
+                    .AddTile(ModContent.TileType<EaselTile>())
                     .Register();
 
-                Mod.CreateRecipe(ItemID.GolfPainting1);
-                    .AddIngredient(ModContent.ItemType<Canvas>());
-                    .AddIngredient(ItemID.SkyBluePaint);
-                    .AddTile(ModContent.TileType<EaselTile>());
-                    .SetResult(calvalex.ItemType("WormHeaven"));
+                Recipe.Create(calvalex.Find<ModItem>("TheGreatSandworm").Type)
+                    .AddIngredient(ModContent.ItemType<Canvas>())
+                    .AddIngredient(ItemID.BrownPaint)
+                    .AddTile(ModContent.TileType<EaselTile>())
                     .Register();
-            }*/
+
+                Recipe.Create(calvalex.Find<ModItem>("TheYhar").Type)
+                    .AddIngredient(ModContent.ItemType<Canvas>())
+                    .AddIngredient(ItemID.YellowPaint)
+                    .AddTile(ModContent.TileType<EaselTile>())
+                    .Register();
+
+                Recipe.Create(calvalex.Find<ModItem>("UCMMPainting").Type)
+                    .AddIngredient(ModContent.ItemType<Canvas>())
+                    .AddIngredient(ItemID.BluePaint)
+                    .AddTile(ModContent.TileType<EaselTile>())
+                    .Register();
+
+                Recipe.Create(calvalex.Find<ModItem>("UnholyTrip").Type)
+                    .AddIngredient(ModContent.ItemType<Canvas>())
+                    .AddIngredient(ItemID.TealPaint)
+                    .AddTile(ModContent.TileType<EaselTile>())
+                    .Register();
+
+                Recipe.Create(calvalex.Find<ModItem>("VVanities").Type)
+                    .AddIngredient(ModContent.ItemType<Canvas>())
+                    .AddIngredient(ItemID.RedPaint)
+                    .AddTile(ModContent.TileType<EaselTile>())
+                    .Register();
+
+                Recipe.Create(calvalex.Find<ModItem>("WilliamPainting").Type)
+                    .AddIngredient(ModContent.ItemType<Canvas>())
+                    .AddIngredient(ItemID.RedPaint)
+                    .AddTile(ModContent.TileType<EaselTile>())
+                    .Register();
+
+                Recipe.Create(calvalex.Find<ModItem>("WormHeaven").Type)
+                    .AddIngredient(ModContent.ItemType<Canvas>())
+                    .AddIngredient(ItemID.SkyBluePaint)
+                    .AddTile(ModContent.TileType<EaselTile>())
+                    .Register();
+
+                Recipe.Create(calvalex.Find<ModItem>("Yharlamitas").Type)
+                    .AddIngredient(ModContent.ItemType<Canvas>())
+                    .AddIngredient(ItemID.GrayPaint)
+                    .AddTile(ModContent.TileType<EaselTile>())
+                    .Register();
+            }
             #endregion
 
             #region pinkymod (Disabled)
             /*Mod pinkymod = ModLoader.GetMod("pinkymod");
             if (pinkymod != null && ModContent.GetInstance<CraftablePaintingsConfigServer>().CraftModdedPaintings)
             {
-                Mod.CreateRecipe(ItemID.GolfPainting1);
+                Recipe.Create(ItemID.GolfPainting1);
                     .AddIngredient(ModContent.ItemType<Canvas>());
                     .AddIngredient(ItemID.WhitePaint);
                     .AddTile(ModContent.TileType<EaselTile>());
-                    .SetResult(pinkymod.ItemType("OverlyDetailedChickenScratch"));
+                    .SetResult(pinkymod.Find<ModItem>("OverlyDetailedChickenScratch"));
                     .Register();
 
-                Mod.CreateRecipe(ItemID.GolfPainting1);
+                Recipe.Create(ItemID.GolfPainting1);
                     .AddIngredient(ModContent.ItemType<Canvas>());
                     .AddIngredient(ItemID.WhitePaint);
                     .AddTile(ModContent.TileType<EaselTile>());
-                    .SetResult(pinkymod.ItemType("WormBossIndicator"));
+                    .SetResult(pinkymod.Find<ModItem>("WormBossIndicator"));
                     .Register();
 
-                Mod.CreateRecipe(ItemID.GolfPainting1);
+                Recipe.Create(ItemID.GolfPainting1);
                     .AddIngredient(ModContent.ItemType<Canvas>());
                     .AddIngredient(ItemID.SkyBluePaint);
                     .AddTile(ModContent.TileType<EaselTile>());
-                    .SetResult(pinkymod.ItemType("RoketLunchced"));
+                    .SetResult(pinkymod.Find<ModItem>("RoketLunchced"));
                     .Register();
 
-                Mod.CreateRecipe(ItemID.GolfPainting1);
+                Recipe.Create(ItemID.GolfPainting1);
                     .AddIngredient(ModContent.ItemType<Canvas>());
                     .AddIngredient(ItemID.OrangePaint);
                     .AddTile(ModContent.TileType<EaselTile>());
-                    .SetResult(pinkymod.ItemType("FerniumPainting"));
+                    .SetResult(pinkymod.Find<ModItem>("FerniumPainting"));
                     .Register();
 
                 //
 
-                Mod.CreateRecipe(ItemID.GolfPainting1);
+                Recipe.Create(ItemID.GolfPainting1);
                     .AddIngredient(ModContent.ItemType<Canvas>());
                     .AddIngredient(ItemID.WhitePaint);
                     .AddTile(pinkymod.TileType("EaselTile"));
-                    .SetResult(pinkymod.ItemType("OverlyDetailedChickenScratch"));
+                    .SetResult(pinkymod.Find<ModItem>("OverlyDetailedChickenScratch"));
                     .Register();
 
-                Mod.CreateRecipe(ItemID.GolfPainting1);
+                Recipe.Create(ItemID.GolfPainting1);
                     .AddIngredient(ModContent.ItemType<Canvas>());
                     .AddIngredient(ItemID.WhitePaint);
                     .AddTile(pinkymod.TileType("EaselTile"));
-                    .SetResult(pinkymod.ItemType("WormBossIndicator"));
+                    .SetResult(pinkymod.Find<ModItem>("WormBossIndicator"));
                     .Register();
 
-                Mod.CreateRecipe(ItemID.GolfPainting1);
+                Recipe.Create(ItemID.GolfPainting1);
                     .AddIngredient(ModContent.ItemType<Canvas>());
                     .AddIngredient(ItemID.SkyBluePaint);
                     .AddTile(pinkymod.TileType("EaselTile"));
-                    .SetResult(pinkymod.ItemType("RoketLunchced"));
+                    .SetResult(pinkymod.Find<ModItem>("RoketLunchced"));
                     .Register();
 
-                Mod.CreateRecipe(ItemID.GolfPainting1);
+                Recipe.Create(ItemID.GolfPainting1);
                     .AddIngredient(ModContent.ItemType<Canvas>());
                     .AddIngredient(ItemID.OrangePaint);
                     .AddTile(pinkymod.TileType("EaselTile"));
-                    .SetResult(pinkymod.ItemType("FerniumPainting"));
+                    .SetResult(pinkymod.Find<ModItem>("FerniumPainting"));
                     .Register();
             }*/
             #endregion
@@ -1240,75 +1254,75 @@ namespace CraftablePaintings
             /*Mod soa = ModLoader.GetMod("SacredTools");
             if (soa != null && ModContent.GetInstance<CraftablePaintingsConfigServer>().CraftModdedPaintings)
             {
-                Mod.CreateRecipe(ItemID.GolfPainting1);
+                Recipe.Create(ItemID.GolfPainting1);
                     .AddIngredient(ModContent.ItemType<Canvas>());
                     .AddIngredient(ItemID.WhitePaint);
                     .AddTile(ModContent.TileType<EaselTile>());
-                    .SetResult(soa.ItemType("Kappa"));
+                    .SetResult(soa.Find<ModItem>("Kappa"));
                     .Register();
 
-                Mod.CreateRecipe(ItemID.GolfPainting1);
+                Recipe.Create(ItemID.GolfPainting1);
                     .AddIngredient(ModContent.ItemType<Canvas>());
                     .AddIngredient(ItemID.BrownPaint);
                     .AddTile(ModContent.TileType<EaselTile>());
-                    .SetResult(soa.ItemType("Daryl"));
+                    .SetResult(soa.Find<ModItem>("Daryl"));
                     .Register();
 
-                Mod.CreateRecipe(ItemID.GolfPainting1);
+                Recipe.Create(ItemID.GolfPainting1);
                     .AddIngredient(ModContent.ItemType<Canvas>());
                     .AddIngredient(ItemID.GrayPaint);
                     .AddTile(ModContent.TileType<EaselTile>());
-                    .SetResult(soa.ItemType("KipSmug"));
+                    .SetResult(soa.Find<ModItem>("KipSmug"));
                     .Register();
 
-                Mod.CreateRecipe(ItemID.GolfPainting1);
+                Recipe.Create(ItemID.GolfPainting1);
                     .AddIngredient(ModContent.ItemType<Canvas>());
                     .AddIngredient(ItemID.PurplePaint);
                     .AddTile(ModContent.TileType<EaselTile>());
-                    .SetResult(soa.ItemType("Polarius"));
+                    .SetResult(soa.Find<ModItem>("Polarius"));
                     .Register();
 
-                Mod.CreateRecipe(ItemID.GolfPainting1);
+                Recipe.Create(ItemID.GolfPainting1);
                     .AddIngredient(ModContent.ItemType<Canvas>());
                     .AddIngredient(ItemID.OrangePaint);
                     .AddTile(ModContent.TileType<EaselTile>());
-                    .SetResult(soa.ItemType("MoodPainting"));
+                    .SetResult(soa.Find<ModItem>("MoodPainting"));
                     .Register();
 
-                Mod.CreateRecipe(ItemID.GolfPainting1);
+                Recipe.Create(ItemID.GolfPainting1);
                     .AddIngredient(ModContent.ItemType<Canvas>());
                     .AddIngredient(ItemID.BluePaint);
                     .AddTile(ModContent.TileType<EaselTile>());
-                    .SetResult(soa.ItemType("LunaticCultistPainting"));
+                    .SetResult(soa.Find<ModItem>("LunaticCultistPainting"));
                     .Register();
 
-                Mod.CreateRecipe(ItemID.GolfPainting1);
+                Recipe.Create(ItemID.GolfPainting1);
                     .AddIngredient(ModContent.ItemType<Canvas>());
                     .AddIngredient(ItemID.PurplePaint);
                     .AddTile(ModContent.TileType<EaselTile>());
-                    .SetResult(soa.ItemType("AbaddonPainting"));
+                    .SetResult(soa.Find<ModItem>("AbaddonPainting"));
                     .Register();
 
-                Mod.CreateRecipe(ItemID.GolfPainting1);
+                Recipe.Create(ItemID.GolfPainting1);
                     .AddIngredient(ModContent.ItemType<Canvas>());
                     .AddIngredient(ItemID.WhitePaint);
                     .AddTile(ModContent.TileType<EaselTile>());
-                    .SetResult(soa.ItemType("GodOfTerraria"));
+                    .SetResult(soa.Find<ModItem>("GodOfTerraria"));
                     .Register();
 
-                Mod.CreateRecipe(ItemID.GolfPainting1);
+                Recipe.Create(ItemID.GolfPainting1);
                     .AddIngredient(ModContent.ItemType<Canvas>());
                     .AddIngredient(ItemID.PurplePaint);
                     .AddTile(ModContent.TileType<EaselTile>());
-                    .SetResult(soa.ItemType("Warmth"));
+                    .SetResult(soa.Find<ModItem>("Warmth"));
                     .Register();
 
-                Mod.CreateRecipe(ItemID.GolfPainting1);
+                Recipe.Create(ItemID.GolfPainting1);
                     .AddIngredient(ModContent.ItemType<Canvas>());
                     .AddIngredient(ItemID.SkyBluePaint);
                     .AddIngredient(ItemID.LunarOre);
                     .AddTile(ModContent.TileType<EaselTile>());
-                    .SetResult(soa.ItemType("Deepfreeze"));
+                    .SetResult(soa.Find<ModItem>("Deepfreeze"));
                     .Register();
             }*/
             #endregion
@@ -1317,186 +1331,186 @@ namespace CraftablePaintings
             /*Mod spirit = ModLoader.GetMod("SpiritMod");
             if (spirit != null && ModContent.GetInstance<CraftablePaintingsConfigServer>().CraftModdedPaintings)
             {
-                Mod.CreateRecipe(ItemID.GolfPainting1);
+                Recipe.Create(ItemID.GolfPainting1);
                     .AddIngredient(ModContent.ItemType<Canvas>());
                     .AddIngredient(ItemID.RedPaint);
                     .AddTile(ModContent.TileType<EaselTile>());
-                    .SetResult(spirit.ItemType("AdvPainting1"));
+                    .SetResult(spirit.Find<ModItem>("AdvPainting1"));
                     .Register();
 
-                Mod.CreateRecipe(ItemID.GolfPainting1);
+                Recipe.Create(ItemID.GolfPainting1);
                     .AddIngredient(ModContent.ItemType<Canvas>());
                     .AddIngredient(ItemID.CyanPaint);
                     .AddTile(ModContent.TileType<EaselTile>());
-                    .SetResult(spirit.ItemType("AdvPainting10"));
+                    .SetResult(spirit.Find<ModItem>("AdvPainting10"));
                     .Register();
 
-                Mod.CreateRecipe(ItemID.GolfPainting1);
+                Recipe.Create(ItemID.GolfPainting1);
                     .AddIngredient(ModContent.ItemType<Canvas>());
                     .AddIngredient(ItemID.GrayPaint);
                     .AddTile(ModContent.TileType<EaselTile>());
-                    .SetResult(spirit.ItemType("AdvPainting11"));
+                    .SetResult(spirit.Find<ModItem>("AdvPainting11"));
                     .Register();
 
-                Mod.CreateRecipe(ItemID.GolfPainting1);
+                Recipe.Create(ItemID.GolfPainting1);
                     .AddIngredient(ModContent.ItemType<Canvas>());
                     .AddIngredient(ItemID.CyanPaint);
                     .AddTile(ModContent.TileType<EaselTile>());
-                    .SetResult(spirit.ItemType("AdvPainting12"));
+                    .SetResult(spirit.Find<ModItem>("AdvPainting12"));
                     .Register();
 
-                Mod.CreateRecipe(ItemID.GolfPainting1);
+                Recipe.Create(ItemID.GolfPainting1);
                     .AddIngredient(ModContent.ItemType<Canvas>());
                     .AddIngredient(ItemID.TealPaint);
                     .AddTile(ModContent.TileType<EaselTile>());
-                    .SetResult(spirit.ItemType("AdvPainting13"));
+                    .SetResult(spirit.Find<ModItem>("AdvPainting13"));
                     .Register();
 
-                Mod.CreateRecipe(ItemID.GolfPainting1);
+                Recipe.Create(ItemID.GolfPainting1);
                     .AddIngredient(ModContent.ItemType<Canvas>());
                     .AddIngredient(ItemID.PurplePaint);
                     .AddTile(ModContent.TileType<EaselTile>());
-                    .SetResult(spirit.ItemType("AdvPainting14"));
+                    .SetResult(spirit.Find<ModItem>("AdvPainting14"));
                     .Register();
 
-                Mod.CreateRecipe(ItemID.GolfPainting1);
+                Recipe.Create(ItemID.GolfPainting1);
                     .AddIngredient(ModContent.ItemType<Canvas>());
                     .AddIngredient(ItemID.TealPaint);
                     .AddTile(ModContent.TileType<EaselTile>());
-                    .SetResult(spirit.ItemType("AdvPainting15"));
+                    .SetResult(spirit.Find<ModItem>("AdvPainting15"));
                     .Register();
 
-                Mod.CreateRecipe(ItemID.GolfPainting1);
+                Recipe.Create(ItemID.GolfPainting1);
                     .AddIngredient(ModContent.ItemType<Canvas>());
                     .AddIngredient(ItemID.OrangePaint);
                     .AddTile(ModContent.TileType<EaselTile>());
-                    .SetResult(spirit.ItemType("AdvPainting16"));
+                    .SetResult(spirit.Find<ModItem>("AdvPainting16"));
                     .Register();
 
-                Mod.CreateRecipe(ItemID.GolfPainting1);
+                Recipe.Create(ItemID.GolfPainting1);
                     .AddIngredient(ModContent.ItemType<Canvas>());
                     .AddIngredient(ItemID.DeepBluePaint);
                     .AddTile(ModContent.TileType<EaselTile>());
-                    .SetResult(spirit.ItemType("AdvPainting17"));
+                    .SetResult(spirit.Find<ModItem>("AdvPainting17"));
                     .Register();
 
-                Mod.CreateRecipe(ItemID.GolfPainting1);
+                Recipe.Create(ItemID.GolfPainting1);
                     .AddIngredient(ModContent.ItemType<Canvas>());
                     .AddIngredient(ItemID.BrownPaint);
                     .AddTile(ModContent.TileType<EaselTile>());
-                    .SetResult(spirit.ItemType("AdvPainting18"));
+                    .SetResult(spirit.Find<ModItem>("AdvPainting18"));
                     .Register();
 
-                Mod.CreateRecipe(ItemID.GolfPainting1);
+                Recipe.Create(ItemID.GolfPainting1);
                     .AddIngredient(ModContent.ItemType<Canvas>());
                     .AddIngredient(ItemID.SkyBluePaint);
                     .AddTile(ModContent.TileType<EaselTile>());
-                    .SetResult(spirit.ItemType("AdvPainting19"));
+                    .SetResult(spirit.Find<ModItem>("AdvPainting19"));
                     .Register();
 
-                Mod.CreateRecipe(ItemID.GolfPainting1);
+                Recipe.Create(ItemID.GolfPainting1);
                     .AddIngredient(ModContent.ItemType<Canvas>());
                     .AddIngredient(ItemID.YellowPaint);
                     .AddTile(ModContent.TileType<EaselTile>());
-                    .SetResult(spirit.ItemType("AdvPainting2"));
+                    .SetResult(spirit.Find<ModItem>("AdvPainting2"));
                     .Register();
 
-                Mod.CreateRecipe(ItemID.GolfPainting1);
+                Recipe.Create(ItemID.GolfPainting1);
                     .AddIngredient(ModContent.ItemType<Canvas>());
                     .AddIngredient(ItemID.WhitePaint);
                     .AddTile(ModContent.TileType<EaselTile>());
-                    .SetResult(spirit.ItemType("AdvPainting20"));
+                    .SetResult(spirit.Find<ModItem>("AdvPainting20"));
                     .Register();
 
-                Mod.CreateRecipe(ItemID.GolfPainting1);
+                Recipe.Create(ItemID.GolfPainting1);
                     .AddIngredient(ModContent.ItemType<Canvas>());
                     .AddIngredient(ItemID.WhitePaint);
                     .AddTile(ModContent.TileType<EaselTile>());
-                    .SetResult(spirit.ItemType("AdvPainting21"));
+                    .SetResult(spirit.Find<ModItem>("AdvPainting21"));
                     .Register();
 
-                Mod.CreateRecipe(ItemID.GolfPainting1);
+                Recipe.Create(ItemID.GolfPainting1);
                     .AddIngredient(ModContent.ItemType<Canvas>());
                     .AddIngredient(ItemID.CyanPaint);
                     .AddTile(ModContent.TileType<EaselTile>());
-                    .SetResult(spirit.ItemType("AdvPainting22"));
+                    .SetResult(spirit.Find<ModItem>("AdvPainting22"));
                     .Register();
 
-                Mod.CreateRecipe(ItemID.GolfPainting1);
+                Recipe.Create(ItemID.GolfPainting1);
                     .AddIngredient(ModContent.ItemType<Canvas>());
                     .AddIngredient(ItemID.BrownPaint);
                     .AddTile(ModContent.TileType<EaselTile>());
-                    .SetResult(spirit.ItemType("AdvPainting23"));
+                    .SetResult(spirit.Find<ModItem>("AdvPainting23"));
                     .Register();
 
-                Mod.CreateRecipe(ItemID.GolfPainting1);
+                Recipe.Create(ItemID.GolfPainting1);
                     .AddIngredient(ModContent.ItemType<Canvas>());
                     .AddIngredient(ItemID.BluePaint);
                     .AddTile(ModContent.TileType<EaselTile>());
-                    .SetResult(spirit.ItemType("AdvPainting3"));
+                    .SetResult(spirit.Find<ModItem>("AdvPainting3"));
                     .Register();
 
-                Mod.CreateRecipe(ItemID.GolfPainting1);
+                Recipe.Create(ItemID.GolfPainting1);
                     .AddIngredient(ModContent.ItemType<Canvas>());
                     .AddIngredient(ItemID.DeepTealPaint);
                     .AddTile(ModContent.TileType<EaselTile>());
-                    .SetResult(spirit.ItemType("AdvPainting4"));
+                    .SetResult(spirit.Find<ModItem>("AdvPainting4"));
                     .Register();
 
-                Mod.CreateRecipe(ItemID.GolfPainting1);
+                Recipe.Create(ItemID.GolfPainting1);
                     .AddIngredient(ModContent.ItemType<Canvas>());
                     .AddIngredient(ItemID.TealPaint);
                     .AddTile(ModContent.TileType<EaselTile>());
-                    .SetResult(spirit.ItemType("AdvPainting5"));
+                    .SetResult(spirit.Find<ModItem>("AdvPainting5"));
                     .Register();
 
-                Mod.CreateRecipe(ItemID.GolfPainting1);
+                Recipe.Create(ItemID.GolfPainting1);
                     .AddIngredient(ModContent.ItemType<Canvas>());
                     .AddIngredient(ItemID.TealPaint);
                     .AddTile(ModContent.TileType<EaselTile>());
-                    .SetResult(spirit.ItemType("AdvPainting6"));
+                    .SetResult(spirit.Find<ModItem>("AdvPainting6"));
                     .Register();
 
-                Mod.CreateRecipe(ItemID.GolfPainting1);
+                Recipe.Create(ItemID.GolfPainting1);
                     .AddIngredient(ModContent.ItemType<Canvas>());
                     .AddIngredient(ItemID.GreenPaint);
                     .AddTile(ModContent.TileType<EaselTile>());
-                    .SetResult(spirit.ItemType("AdvPainting7"));
+                    .SetResult(spirit.Find<ModItem>("AdvPainting7"));
                     .Register();
 
-                Mod.CreateRecipe(ItemID.GolfPainting1);
+                Recipe.Create(ItemID.GolfPainting1);
                     .AddIngredient(ModContent.ItemType<Canvas>());
                     .AddIngredient(ItemID.BrownPaint);
                     .AddTile(ModContent.TileType<EaselTile>());
-                    .SetResult(spirit.ItemType("AdvPainting8"));
+                    .SetResult(spirit.Find<ModItem>("AdvPainting8"));
                     .Register();
 
-                Mod.CreateRecipe(ItemID.GolfPainting1);
+                Recipe.Create(ItemID.GolfPainting1);
                     .AddIngredient(ModContent.ItemType<Canvas>());
                     .AddIngredient(ItemID.SkyBluePaint);
                     .AddTile(ModContent.TileType<EaselTile>());
-                    .SetResult(spirit.ItemType("AdvPainting9"));
+                    .SetResult(spirit.Find<ModItem>("AdvPainting9"));
                     .Register();
 
-                Mod.CreateRecipe(ItemID.GolfPainting1);
+                Recipe.Create(ItemID.GolfPainting1);
                     .AddIngredient(ModContent.ItemType<Canvas>());
                     .AddIngredient(ItemID.VioletPaint);
                     .AddTile(ModContent.TileType<EaselTile>());
-                    .SetResult(spirit.ItemType("DuskingPainting"));
+                    .SetResult(spirit.Find<ModItem>("DuskingPainting"));
                     .Register();
 
-                Mod.CreateRecipe(ItemID.GolfPainting1);
+                Recipe.Create(ItemID.GolfPainting1);
                     .AddIngredient(ModContent.ItemType<Canvas>());
                     .AddIngredient(ItemID.DeepBluePaint);
                     .AddTile(ModContent.TileType<EaselTile>());
-                    .SetResult(spirit.ItemType("FishingPainting"));
+                    .SetResult(spirit.Find<ModItem>("FishingPainting"));
                     .Register();
 
-                Mod.CreateRecipe(ItemID.GolfPainting1);
+                Recipe.Create(ItemID.GolfPainting1);
                     .AddIngredient(ModContent.ItemType<Canvas>());
                     .AddIngredient(ItemID.BrownPaint);
                     .AddTile(ModContent.TileType<EaselTile>());
-                    .SetResult(spirit.ItemType("FloppaPainting"));
+                    .SetResult(spirit.Find<ModItem>("FloppaPainting"));
                     .Register();
             }*/
             #endregion
@@ -1505,222 +1519,222 @@ namespace CraftablePaintings
             /*Mod split = ModLoader.GetMod("Split");
             if (split != null && ModContent.GetInstance<CraftablePaintingsConfigServer>().CraftModdedPaintings)
             {
-                Mod.CreateRecipe(ItemID.GolfPainting1);
+                Recipe.Create(ItemID.GolfPainting1);
                     .AddIngredient(ModContent.ItemType<Canvas>());
                     .AddIngredient(ItemID.GreenPaint);
                     .AddTile(ModContent.TileType<EaselTile>());
-                    .SetResult(split.ItemType("ChildOfTheCorn"));
+                    .SetResult(split.Find<ModItem>("ChildOfTheCorn"));
                     .Register();
 
-                Mod.CreateRecipe(ItemID.GolfPainting1);
+                Recipe.Create(ItemID.GolfPainting1);
                     .AddIngredient(ModContent.ItemType<Canvas>());
                     .AddIngredient(ItemID.PurplePaint);
                     .AddTile(ModContent.TileType<EaselTile>());
-                    .SetResult(split.ItemType("OneAndOnly"));
+                    .SetResult(split.Find<ModItem>("OneAndOnly"));
                     .Register();
 
-                Mod.CreateRecipe(ItemID.GolfPainting1);
+                Recipe.Create(ItemID.GolfPainting1);
                     .AddIngredient(ModContent.ItemType<Canvas>());
                     .AddIngredient(ItemID.PurplePaint);
                     .AddTile(ModContent.TileType<EaselTile>());
-                    .SetResult(split.ItemType("OneSmallStepForAPirate"));
+                    .SetResult(split.Find<ModItem>("OneSmallStepForAPirate"));
                     .Register();
 
-                Mod.CreateRecipe(ItemID.GolfPainting1);
+                Recipe.Create(ItemID.GolfPainting1);
                     .AddIngredient(ModContent.ItemType<Canvas>());
                     .AddIngredient(ItemID.VioletPaint);
                     .AddTile(ModContent.TileType<EaselTile>());
-                    .SetResult(split.ItemType("TheThunderbolt"));
+                    .SetResult(split.Find<ModItem>("TheThunderbolt"));
                     .Register();
 
-                Mod.CreateRecipe(ItemID.GolfPainting1);
+                Recipe.Create(ItemID.GolfPainting1);
                     .AddIngredient(ModContent.ItemType<Canvas>());
                     .AddIngredient(ItemID.YellowPaint);
                     .AddTile(ModContent.TileType<EaselTile>());
-                    .SetResult(split.ItemType("OOOMagicianOOO"));
+                    .SetResult(split.Find<ModItem>("OOOMagicianOOO"));
                     .Register();
 
-                Mod.CreateRecipe(ItemID.GolfPainting1);
+                Recipe.Create(ItemID.GolfPainting1);
                     .AddIngredient(ModContent.ItemType<Canvas>());
                     .AddIngredient(ItemID.WhitePaint);
                     .AddTile(ModContent.TileType<EaselTile>());
-                    .SetResult(split.ItemType("BigFan"));
+                    .SetResult(split.Find<ModItem>("BigFan"));
                     .Register();
 
-                Mod.CreateRecipe(ItemID.GolfPainting1);
+                Recipe.Create(ItemID.GolfPainting1);
                     .AddIngredient(ModContent.ItemType<Canvas>());
                     .AddIngredient(ItemID.GrayPaint);
                     .AddTile(ModContent.TileType<EaselTile>());
-                    .SetResult(split.ItemType("DrCool"));
+                    .SetResult(split.Find<ModItem>("DrCool"));
                     .Register();
 
-                Mod.CreateRecipe(ItemID.GolfPainting1);
+                Recipe.Create(ItemID.GolfPainting1);
                     .AddIngredient(ModContent.ItemType<Canvas>());
                     .AddIngredient(ItemID.PurplePaint);
                     .AddTile(ModContent.TileType<EaselTile>());
-                    .SetResult(split.ItemType("FamiliarFace"));
+                    .SetResult(split.Find<ModItem>("FamiliarFace"));
                     .Register();
 
-                Mod.CreateRecipe(ItemID.GolfPainting1);
+                Recipe.Create(ItemID.GolfPainting1);
                     .AddIngredient(ModContent.ItemType<Canvas>());
                     .AddIngredient(ItemID.CyanPaint);
                     .AddTile(ModContent.TileType<EaselTile>());
-                    .SetResult(split.ItemType("FilthyFranChan"));
+                    .SetResult(split.Find<ModItem>("FilthyFranChan"));
                     .Register();
 
-                Mod.CreateRecipe(ItemID.GolfPainting1);
+                Recipe.Create(ItemID.GolfPainting1);
                     .AddIngredient(ModContent.ItemType<Canvas>());
                     .AddIngredient(ItemID.BrownPaint);
                     .AddTile(ModContent.TileType<EaselTile>());
-                    .SetResult(split.ItemType("FullHouse"));
+                    .SetResult(split.Find<ModItem>("FullHouse"));
                     .Register();
 
-                Mod.CreateRecipe(ItemID.GolfPainting1);
+                Recipe.Create(ItemID.GolfPainting1);
                     .AddIngredient(ModContent.ItemType<Canvas>());
                     .AddIngredient(ItemID.GrayPaint);
                     .AddTile(ModContent.TileType<EaselTile>());
-                    .SetResult(split.ItemType("IDRTO"));
+                    .SetResult(split.Find<ModItem>("IDRTO"));
                     .Register();
 
-                Mod.CreateRecipe(ItemID.GolfPainting1);
+                Recipe.Create(ItemID.GolfPainting1);
                     .AddIngredient(ModContent.ItemType<Canvas>());
                     .AddIngredient(ItemID.SkyBluePaint);
                     .AddTile(ModContent.TileType<EaselTile>());
-                    .SetResult(split.ItemType("IBB"));
+                    .SetResult(split.Find<ModItem>("IBB"));
                     .Register();
 
-                Mod.CreateRecipe(ItemID.GolfPainting1);
+                Recipe.Create(ItemID.GolfPainting1);
                     .AddIngredient(ModContent.ItemType<Canvas>());
                     .AddIngredient(ItemID.PurplePaint);
                     .AddTile(ModContent.TileType<EaselTile>());
-                    .SetResult(split.ItemType("LadyInWaiting"));
+                    .SetResult(split.Find<ModItem>("LadyInWaiting"));
                     .Register();
 
-                Mod.CreateRecipe(ItemID.GolfPainting1);
+                Recipe.Create(ItemID.GolfPainting1);
                     .AddIngredient(ModContent.ItemType<Canvas>());
                     .AddIngredient(ItemID.BrownPaint);
                     .AddTile(ModContent.TileType<EaselTile>());
-                    .SetResult(split.ItemType("Loneliness"));
+                    .SetResult(split.Find<ModItem>("Loneliness"));
                     .Register();
 
-                Mod.CreateRecipe(ItemID.GolfPainting1);
+                Recipe.Create(ItemID.GolfPainting1);
                     .AddIngredient(ModContent.ItemType<Canvas>());
                     .AddIngredient(ItemID.DeepBluePaint);
                     .AddTile(ModContent.TileType<EaselTile>());
-                    .SetResult(split.ItemType("MJ"));
+                    .SetResult(split.Find<ModItem>("MJ"));
                     .Register();
 
-                Mod.CreateRecipe(ItemID.GolfPainting1);
+                Recipe.Create(ItemID.GolfPainting1);
                     .AddIngredient(ModContent.ItemType<Canvas>());
                     .AddIngredient(ItemID.DeepPurplePaint);
                     .AddTile(ModContent.TileType<EaselTile>());
-                    .SetResult(split.ItemType("TheGlassman"));
+                    .SetResult(split.Find<ModItem>("TheGlassman"));
                     .Register();
 
-                Mod.CreateRecipe(ItemID.GolfPainting1);
+                Recipe.Create(ItemID.GolfPainting1);
                     .AddIngredient(ModContent.ItemType<Canvas>());
                     .AddIngredient(ItemID.DeepPurplePaint);
                     .AddTile(ModContent.TileType<EaselTile>());
-                    .SetResult(split.ItemType("ManOfShadows"));
+                    .SetResult(split.Find<ModItem>("ManOfShadows"));
                     .Register();
 
-                Mod.CreateRecipe(ItemID.GolfPainting1);
+                Recipe.Create(ItemID.GolfPainting1);
                     .AddIngredient(ModContent.ItemType<Canvas>());
                     .AddIngredient(ItemID.BrownPaint);
                     .AddIngredient(ItemID.Wood);
                     .AddTile(ModContent.TileType<EaselTile>());
-                    .SetResult(split.ItemType("MissingPoster"));
+                    .SetResult(split.Find<ModItem>("MissingPoster"));
                     .Register();
 
-                Mod.CreateRecipe(ItemID.GolfPainting1);
+                Recipe.Create(ItemID.GolfPainting1);
                     .AddIngredient(ModContent.ItemType<Canvas>());
                     .AddIngredient(ItemID.BrownPaint);
                     .AddTile(ModContent.TileType<EaselTile>());
-                    .SetResult(split.ItemType("MysteryMan"));
+                    .SetResult(split.Find<ModItem>("MysteryMan"));
                     .Register();
 
-                Mod.CreateRecipe(ItemID.GolfPainting1);
+                Recipe.Create(ItemID.GolfPainting1);
                     .AddIngredient(ModContent.ItemType<Canvas>());
                     .AddIngredient(ItemID.WhitePaint);
                     .AddTile(ModContent.TileType<EaselTile>());
-                    .SetResult(split.ItemType("PageTurner"));
+                    .SetResult(split.Find<ModItem>("PageTurner"));
                     .Register();
 
-                Mod.CreateRecipe(ItemID.GolfPainting1);
+                Recipe.Create(ItemID.GolfPainting1);
                     .AddIngredient(ModContent.ItemType<Canvas>());
                     .AddIngredient(ItemID.LimePaint);
                     .AddTile(ModContent.TileType<EaselTile>());
-                    .SetResult(split.ItemType("SpinalGalaxy"));
+                    .SetResult(split.Find<ModItem>("SpinalGalaxy"));
                     .Register();
 
-                Mod.CreateRecipe(ItemID.GolfPainting1);
+                Recipe.Create(ItemID.GolfPainting1);
                     .AddIngredient(ModContent.ItemType<Canvas>());
                     .AddIngredient(ItemID.BrownPaint);
                     .AddTile(ModContent.TileType<EaselTile>());
-                    .SetResult(split.ItemType("TheIntruder"));
+                    .SetResult(split.Find<ModItem>("TheIntruder"));
                     .Register();
 
-                Mod.CreateRecipe(ItemID.GolfPainting1);
+                Recipe.Create(ItemID.GolfPainting1);
                     .AddIngredient(ModContent.ItemType<Canvas>());
                     .AddIngredient(ItemID.OrangePaint);
                     .AddTile(ModContent.TileType<EaselTile>());
-                    .SetResult(split.ItemType("TheNexus"));
+                    .SetResult(split.Find<ModItem>("TheNexus"));
                     .Register();
 
-                Mod.CreateRecipe(ItemID.GolfPainting1);
+                Recipe.Create(ItemID.GolfPainting1);
                     .AddIngredient(ModContent.ItemType<Canvas>());
                     .AddIngredient(ItemID.OrangePaint);
                     .AddTile(ModContent.TileType<EaselTile>());
-                    .SetResult(split.ItemType("TheSandbox"));
+                    .SetResult(split.Find<ModItem>("TheSandbox"));
                     .Register();
 
-                Mod.CreateRecipe(ItemID.GolfPainting1);
+                Recipe.Create(ItemID.GolfPainting1);
                     .AddIngredient(ModContent.ItemType<Canvas>());
                     .AddIngredient(ItemID.BluePaint);
                     .AddTile(ModContent.TileType<EaselTile>());
-                    .SetResult(split.ItemType("TheTremor"));
+                    .SetResult(split.Find<ModItem>("TheTremor"));
                     .Register();
 
-                Mod.CreateRecipe(ItemID.GolfPainting1);
+                Recipe.Create(ItemID.GolfPainting1);
                     .AddIngredient(ModContent.ItemType<Canvas>());
                     .AddIngredient(ItemID.BrownPaint);
                     .AddIngredient(ItemID.Wood);
                     .AddTile(ModContent.TileType<EaselTile>());
-                    .SetResult(split.ItemType("WantedPoster"));
+                    .SetResult(split.Find<ModItem>("WantedPoster"));
                     .Register();
 
-                Mod.CreateRecipe(ItemID.GolfPainting1);
+                Recipe.Create(ItemID.GolfPainting1);
                     .AddIngredient(ModContent.ItemType<Canvas>());
                     .AddIngredient(ItemID.DeepBluePaint);
                     .AddTile(ModContent.TileType<EaselTile>());
-                    .SetResult(split.ItemType("Aurora"));
+                    .SetResult(split.Find<ModItem>("Aurora"));
                     .Register();
 
-                Mod.CreateRecipe(ItemID.GolfPainting1);
+                Recipe.Create(ItemID.GolfPainting1);
                     .AddIngredient(ModContent.ItemType<Canvas>());
                     .AddIngredient(ItemID.GreenPaint);
                     .AddTile(ModContent.TileType<EaselTile>());
-                    .SetResult(split.ItemType("EverybodyLovesGlowtoad"));
+                    .SetResult(split.Find<ModItem>("EverybodyLovesGlowtoad"));
                     .Register();
 
-                Mod.CreateRecipe(ItemID.GolfPainting1);
+                Recipe.Create(ItemID.GolfPainting1);
                     .AddIngredient(ModContent.ItemType<Canvas>());
                     .AddIngredient(ItemID.DeepVioletPaint);
                     .AddTile(ModContent.TileType<EaselTile>());
-                    .SetResult(split.ItemType("KingoftheNight"));
+                    .SetResult(split.Find<ModItem>("KingoftheNight"));
                     .Register();
 
-                Mod.CreateRecipe(ItemID.GolfPainting1);
+                Recipe.Create(ItemID.GolfPainting1);
                     .AddIngredient(ModContent.ItemType<Canvas>());
                     .AddIngredient(ItemID.PurplePaint);
                     .AddTile(ModContent.TileType<EaselTile>());
-                    .SetResult(split.ItemType("TheGraduation"));
+                    .SetResult(split.Find<ModItem>("TheGraduation"));
                     .Register();
             }*/
             #endregion
 
             #region Fargo's Mutant Mod
-            if (ModLoader.TryGetMod("Fargowiltas", out Mod fargoMutant) && ModContent.GetInstance<CraftablePaintingsConfigServer>().CraftModdedPaintings)
+            if (ModLoader.TryGetMod("Fargowiltas", out Mod fargoMutant) && craftModdedPaintings)
             {
                 Recipe.Create(fargoMutant.Find<ModItem>("EchPainting").Type)
                     .AddIngredient(ModContent.ItemType<Canvas>())
@@ -1731,51 +1745,48 @@ namespace CraftablePaintings
             }
             #endregion
 
-            #region Fargo's Soul Mod (Disabled)
-            /*Mod fargoSoul = ModLoader.GetMod("FargowiltasSouls");
-            if (fargoSoul != null && ModContent.GetInstance<CraftablePaintingsConfigServer>().CraftModdedPaintings)
+            #region Fargo's Soul Mod
+            if (ModLoader.TryGetMod("FargowiltasSouls", out Mod fargoSoul) && craftModdedPaintings)
             {
-                Mod.CreateRecipe(ItemID.GolfPainting1);
-                    .AddIngredient(ModContent.ItemType<Canvas>());
-                    .AddIngredient(ItemID.PurplePaint);
-                    .AddIngredient(ItemID.BeeWax);
-                    .AddTile(ModContent.TileType<EaselTile>());
-                    .SetResult(fargoSoul.ItemType("TwentyTwoPainting"));
+               Recipe.Create(fargoSoul.Find<ModItem>("TwentyTwoPainting").Type)
+                    .AddIngredient(ModContent.ItemType<Canvas>())
+                    .AddIngredient(ItemID.PurplePaint)
+                    .AddIngredient(ItemID.BeeWax)
+                    .AddTile(ModContent.TileType<EaselTile>())
                     .Register();
 
-                Mod.CreateRecipe(ItemID.GolfPainting1);
-                    .AddIngredient(ModContent.ItemType<Canvas>());
-                    .AddIngredient(ItemID.BrownPaint);
-                    .AddIngredient(fargoSoul.ItemType("Sadism"));
-                    .AddTile(ModContent.TileType<EaselTile>());
-                    .SetResult(fargoSoul.ItemType("ScremPainting"));
+                Recipe.Create(fargoSoul.Find<ModItem>("ScremPainting").Type)
+                    .AddIngredient(ModContent.ItemType<Canvas>())
+                    .AddIngredient(ItemID.BrownPaint)
+                    .AddIngredient(fargoSoul.Find<ModItem>("EternalEnergy").Type)
+                    .AddTile(ModContent.TileType<EaselTile>())
                     .Register();
-            }*/
+            }
             #endregion
 
             #region Mod of Redemption (Disabled)
             /*Mod mor = ModLoader.GetMod("Redemption");
             if (mor != null && ModContent.GetInstance<CraftablePaintingsConfigServer>().CraftModdedPaintings)
             {
-                Mod.CreateRecipe(ItemID.GolfPainting1);
+                Recipe.Create(ItemID.GolfPainting1);
                     .AddIngredient(ModContent.ItemType<Canvas>());
                     .AddIngredient(ItemID.GrayPaint);
                     .AddTile(ModContent.TileType<EaselTile>());
-                    .SetResult(mor.ItemType("BrothersPainting"));
+                    .SetResult(mor.Find<ModItem>("BrothersPainting"));
                     .Register();
 
-                Mod.CreateRecipe(ItemID.GolfPainting1);
+                Recipe.Create(ItemID.GolfPainting1);
                     .AddIngredient(ModContent.ItemType<Canvas>());
                     .AddIngredient(ItemID.BrownPaint);
                     .AddTile(ModContent.TileType<EaselTile>());
-                    .SetResult(mor.ItemType("ForestGolemPainting"));
+                    .SetResult(mor.Find<ModItem>("ForestGolemPainting"));
                     .Register();
 
-                Mod.CreateRecipe(ItemID.GolfPainting1);
+                Recipe.Create(ItemID.GolfPainting1);
                     .AddIngredient(ModContent.ItemType<Canvas>());
                     .AddIngredient(ItemID.GrayPaint);
                     .AddTile(ModContent.TileType<EaselTile>());
-                    .SetResult(mor.ItemType("BrothersPaintingAlt"));
+                    .SetResult(mor.Find<ModItem>("BrothersPaintingAlt"));
                     .Register();
             }*/
             #endregion
@@ -1784,18 +1795,18 @@ namespace CraftablePaintings
             /*Mod atc = ModLoader.GetMod("ATC");
             if (atc != null && ModContent.GetInstance<CraftablePaintingsConfigServer>().CraftModdedPaintings)
             {
-                Mod.CreateRecipe(ItemID.GolfPainting1);
+                Recipe.Create(ItemID.GolfPainting1);
                     .AddIngredient(ModContent.ItemType<Canvas>());
                     .AddIngredient(ItemID.DeepGreenPaint);
                     .AddTile(ModContent.TileType<EaselTile>());
-                    .SetResult(atc.ItemType("AccursedWoods"));
+                    .SetResult(atc.Find<ModItem>("AccursedWoods"));
                     .Register();
 
-                Mod.CreateRecipe(ItemID.GolfPainting1);
+                Recipe.Create(ItemID.GolfPainting1);
                     .AddIngredient(ModContent.ItemType<Canvas>());
                     .AddIngredient(ItemID.RedPaint);
                     .AddTile(ModContent.TileType<EaselTile>());
-                    .SetResult(atc.ItemType("PrayUnderTheCrimsonMoon"));
+                    .SetResult(atc.Find<ModItem>("PrayUnderTheCrimsonMoon"));
                     .Register();
             }*/
             #endregion

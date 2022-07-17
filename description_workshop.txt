@@ -7,6 +7,8 @@ Each painting requires 1 Canvas and 1 Paint bucket at the Easel.
 Some paintings require an extra ingredient based on their progression.
 
 Includes paintings from:
+	Calamity's Vanities
 	Fargo's Mutant Mod
+	Fargo's Souls Mod
 
 Modded painting recipes must first be enabled in the config!
