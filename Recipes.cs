@@ -757,6 +757,7 @@ namespace CraftablePaintings
             #endregion
 
             bool craftModdedPaintings = ModContent.GetInstance<CraftablePaintingsConfigServer>().CraftModdedPaintings;
+            int resultItem;
 
             #region SGAmod (Disabled)
             /*Mod sgamod = ModLoader.GetMod("SGAmod");
@@ -968,217 +969,289 @@ namespace CraftablePaintings
             #region Calamity's Vanities
             if (ModLoader.TryGetMod("CalValEX", out Mod calvalex) && craftModdedPaintings)
             {
-                Recipe.Create(calvalex.Find<ModItem>("AccidentalAbominationn").Type)
-                    .AddIngredient(ModContent.ItemType<Canvas>())
-                    .AddIngredient(ItemID.BrownPaint)
-                    .AddTile(ModContent.TileType<EaselTile>())
-                    .Register();
+                resultItem = CrossModHelper.SafelyGetCrossModItem(calvalex, "AccidentalAbominationn");
+                if (resultItem != 0)
+                    Recipe.Create(resultItem)
+                        .AddIngredient(ModContent.ItemType<Canvas>())
+                        .AddIngredient(ItemID.BrownPaint)
+                        .AddTile(ModContent.TileType<EaselTile>())
+                        .Register();
 
-                Recipe.Create(calvalex.Find<ModItem>("BlazingConflict").Type)
-                    .AddIngredient(ModContent.ItemType<Canvas>())
-                    .AddIngredient(ItemID.OrangePaint)
-                    .AddTile(ModContent.TileType<EaselTile>())
-                    .Register();
+                resultItem = CrossModHelper.SafelyGetCrossModItem(calvalex, "BlazingConflict");
+                if (resultItem != 0)
+                    Recipe.Create(resultItem)
+                        .AddIngredient(ModContent.ItemType<Canvas>())
+                        .AddIngredient(ItemID.OrangePaint)
+                        .AddTile(ModContent.TileType<EaselTile>())
+                        .Register();
 
-                Recipe.Create(calvalex.Find<ModItem>("CalamiteaTime").Type)
-                    .AddIngredient(ModContent.ItemType<Canvas>())
-                    .AddIngredient(ItemID.LimePaint)
-                    .AddTile(ModContent.TileType<EaselTile>())
-                    .Register();
+                resultItem = CrossModHelper.SafelyGetCrossModItem(calvalex, "CalamiteaTime");
+                if (resultItem != 0)
+                    Recipe.Create(resultItem)
+                        .AddIngredient(ModContent.ItemType<Canvas>())
+                        .AddIngredient(ItemID.LimePaint)
+                        .AddTile(ModContent.TileType<EaselTile>())
+                        .Register();
 
-                Recipe.Create(calvalex.Find<ModItem>("CalamityFriends").Type)
-                    .AddIngredient(ModContent.ItemType<Canvas>())
-                    .AddIngredient(ItemID.YellowPaint)
-                    .AddTile(ModContent.TileType<EaselTile>())
-                    .Register();
+                resultItem = CrossModHelper.SafelyGetCrossModItem(calvalex, "CalamityFriends");
+                if (resultItem != 0)
+                    Recipe.Create(resultItem)
+                        .AddIngredient(ModContent.ItemType<Canvas>())
+                        .AddIngredient(ItemID.YellowPaint)
+                        .AddTile(ModContent.TileType<EaselTile>())
+                        .Register();
 
-                Recipe.Create(calvalex.Find<ModItem>("CalamityPaint").Type)
-                    .AddIngredient(ModContent.ItemType<Canvas>())
-                    .AddIngredient(ItemID.RedPaint)
-                    .AddTile(ModContent.TileType<EaselTile>())
-                    .Register();
+                resultItem = CrossModHelper.SafelyGetCrossModItem(calvalex, "CalamityPaint");
+                if (resultItem != 0)
+                    Recipe.Create(resultItem)
+                        .AddIngredient(ModContent.ItemType<Canvas>())
+                        .AddIngredient(ItemID.RedPaint)
+                        .AddTile(ModContent.TileType<EaselTile>())
+                        .Register();
 
-                Recipe.Create(calvalex.Find<ModItem>("CalamityPaintRetold").Type)
-                    .AddIngredient(ModContent.ItemType<Canvas>())
-                    .AddIngredient(ItemID.YellowPaint)
-                    .AddTile(ModContent.TileType<EaselTile>())
-                    .Register();
+                resultItem = CrossModHelper.SafelyGetCrossModItem(calvalex, "CalamityPaintRetold");
+                if (resultItem != 0)
+                    Recipe.Create(resultItem)
+                        .AddIngredient(ModContent.ItemType<Canvas>())
+                        .AddIngredient(ItemID.YellowPaint)
+                        .AddTile(ModContent.TileType<EaselTile>())
+                        .Register();
 
-                Recipe.Create(calvalex.Find<ModItem>("CirrusBooze").Type)
-                    .AddIngredient(ModContent.ItemType<Canvas>())
-                    .AddIngredient(ItemID.VioletPaint)
-                    .AddTile(ModContent.TileType<EaselTile>())
-                    .Register();
+                resultItem = CrossModHelper.SafelyGetCrossModItem(calvalex, "CirrusBooze");
+                if (resultItem != 0)
+                    Recipe.Create(resultItem)
+                        .AddIngredient(ModContent.ItemType<Canvas>())
+                        .AddIngredient(ItemID.VioletPaint)
+                        .AddTile(ModContent.TileType<EaselTile>())
+                        .Register();
 
-                Recipe.Create(calvalex.Find<ModItem>("Clam").Type)
-                    .AddIngredient(ModContent.ItemType<Canvas>())
-                    .AddIngredient(ItemID.BrownPaint)
-                    .AddTile(ModContent.TileType<EaselTile>())
-                    .Register();
+                resultItem = CrossModHelper.SafelyGetCrossModItem(calvalex, "Clam");
+                if (resultItem != 0)
+                    Recipe.Create(resultItem)
+                        .AddIngredient(ModContent.ItemType<Canvas>())
+                        .AddIngredient(ItemID.BrownPaint)
+                        .AddTile(ModContent.TileType<EaselTile>())
+                        .Register();
 
-                Recipe.Create(calvalex.Find<ModItem>("CosmicTerror").Type)
-                    .AddIngredient(ModContent.ItemType<Canvas>())
-                    .AddIngredient(ItemID.VioletPaint)
-                    .AddTile(ModContent.TileType<EaselTile>())
-                    .Register();
+                resultItem = CrossModHelper.SafelyGetCrossModItem(calvalex, "CosmicTerror");
+                if (resultItem != 0)
+                    Recipe.Create(resultItem)
+                        .AddIngredient(ModContent.ItemType<Canvas>())
+                        .AddIngredient(ItemID.VioletPaint)
+                        .AddTile(ModContent.TileType<EaselTile>())
+                        .Register();
 
-                Recipe.Create(calvalex.Find<ModItem>("DarkMagic").Type)
-                    .AddIngredient(ModContent.ItemType<Canvas>())
-                    .AddIngredient(ItemID.BrownPaint)
-                    .AddTile(ModContent.TileType<EaselTile>())
-                    .Register();
+                resultItem = CrossModHelper.SafelyGetCrossModItem(calvalex, "DarkMagic");
+                if (resultItem != 0)
+                    Recipe.Create(resultItem)
+                        .AddIngredient(ModContent.ItemType<Canvas>())
+                        .AddIngredient(ItemID.BrownPaint)
+                        .AddTile(ModContent.TileType<EaselTile>())
+                        .Register();
 
-                Recipe.Create(calvalex.Find<ModItem>("DraedonPopcorn").Type)
-                    .AddIngredient(ModContent.ItemType<Canvas>())
-                    .AddIngredient(ItemID.BrownPaint)
-                    .AddTile(ModContent.TileType<EaselTile>())
-                    .Register();
+                resultItem = CrossModHelper.SafelyGetCrossModItem(calvalex, "DraedonPopcorn");
+                if (resultItem != 0)
+                    Recipe.Create(resultItem)
+                        .AddIngredient(ModContent.ItemType<Canvas>())
+                        .AddIngredient(ItemID.BrownPaint)
+                        .AddTile(ModContent.TileType<EaselTile>())
+                        .Register();
 
-                Recipe.Create(calvalex.Find<ModItem>("Duality").Type)
-                    .AddIngredient(ModContent.ItemType<Canvas>())
-                    .AddIngredient(ItemID.DeepPurplePaint)
-                    .AddTile(ModContent.TileType<EaselTile>())
-                    .Register();
+                resultItem = CrossModHelper.SafelyGetCrossModItem(calvalex, "Duality");
+                if (resultItem != 0)
+                    Recipe.Create(resultItem)
+                        .AddIngredient(ModContent.ItemType<Canvas>())
+                        .AddIngredient(ItemID.DeepPurplePaint)
+                        .AddTile(ModContent.TileType<EaselTile>())
+                        .Register();
 
-                Recipe.Create(calvalex.Find<ModItem>("Espelho").Type)
-                    .AddIngredient(ModContent.ItemType<Canvas>())
-                    .AddIngredient(ItemID.DeepVioletPaint)
-                    .AddTile(ModContent.TileType<EaselTile>())
-                    .Register();
+                resultItem = CrossModHelper.SafelyGetCrossModItem(calvalex, "Espelho");
+                if (resultItem != 0)
+                    Recipe.Create(resultItem)
+                        .AddIngredient(ModContent.ItemType<Canvas>())
+                        .AddIngredient(ItemID.DeepVioletPaint)
+                        .AddTile(ModContent.TileType<EaselTile>())
+                        .Register();
 
-                Recipe.Create(calvalex.Find<ModItem>("EyeofXeroc").Type)
-                    .AddIngredient(ModContent.ItemType<Canvas>())
-                    .AddIngredient(ItemID.DeepVioletPaint)
-                    .AddTile(ModContent.TileType<EaselTile>())
-                    .Register();
+                resultItem = CrossModHelper.SafelyGetCrossModItem(calvalex, "EyeofXeroc");
+                if (resultItem != 0)
+                    Recipe.Create(resultItem)
+                        .AddIngredient(ModContent.ItemType<Canvas>())
+                        .AddIngredient(ItemID.DeepVioletPaint)
+                        .AddTile(ModContent.TileType<EaselTile>())
+                        .Register();
 
-                Recipe.Create(calvalex.Find<ModItem>("Frozen").Type)
-                    .AddIngredient(ModContent.ItemType<Canvas>())
-                    .AddIngredient(ItemID.DeepSkyBluePaint)
-                    .AddTile(ModContent.TileType<EaselTile>())
-                    .Register();
+                resultItem = CrossModHelper.SafelyGetCrossModItem(calvalex, "Frozen");
+                if (resultItem != 0)
+                    Recipe.Create(resultItem)
+                        .AddIngredient(ModContent.ItemType<Canvas>())
+                        .AddIngredient(ItemID.DeepSkyBluePaint)
+                        .AddTile(ModContent.TileType<EaselTile>())
+                        .Register();
 
-                Recipe.Create(calvalex.Find<ModItem>("LostSouls").Type)
-                    .AddIngredient(ModContent.ItemType<Canvas>())
-                    .AddIngredient(ItemID.SkyBluePaint)
-                    .AddTile(ModContent.TileType<EaselTile>())
-                    .Register();
+                resultItem = CrossModHelper.SafelyGetCrossModItem(calvalex, "LostSouls");
+                if (resultItem != 0)
+                    Recipe.Create(resultItem)
+                        .AddIngredient(ModContent.ItemType<Canvas>())
+                        .AddIngredient(ItemID.SkyBluePaint)
+                        .AddTile(ModContent.TileType<EaselTile>())
+                        .Register();
 
-                Recipe.Create(calvalex.Find<ModItem>("ModIconPainting").Type)
-                    .AddIngredient(ModContent.ItemType<Canvas>())
-                    .AddIngredient(ItemID.VioletPaint)
-                    .AddTile(ModContent.TileType<EaselTile>())
-                    .Register();
+                resultItem = CrossModHelper.SafelyGetCrossModItem(calvalex, "ModIconPainting");
+                if (resultItem != 0)
+                    Recipe.Create(resultItem)
+                        .AddIngredient(ModContent.ItemType<Canvas>())
+                        .AddIngredient(ItemID.VioletPaint)
+                        .AddTile(ModContent.TileType<EaselTile>())
+                        .Register();
 
-                Recipe.Create(calvalex.Find<ModItem>("NotLikeHome").Type)
-                    .AddIngredient(ModContent.ItemType<Canvas>())
-                    .AddIngredient(ItemID.DeepBluePaint)
-                    .AddTile(ModContent.TileType<EaselTile>())
-                    .Register();
+                resultItem = CrossModHelper.SafelyGetCrossModItem(calvalex, "NotLikeHome");
+                if (resultItem != 0)
+                    Recipe.Create(resultItem)
+                        .AddIngredient(ModContent.ItemType<Canvas>())
+                        .AddIngredient(ItemID.DeepBluePaint)
+                        .AddTile(ModContent.TileType<EaselTile>())
+                        .Register();
 
-                Recipe.Create(calvalex.Find<ModItem>("OldModIconPainting").Type)
-                    .AddIngredient(ModContent.ItemType<Canvas>())
-                    .AddIngredient(ItemID.RedPaint)
-                    .AddTile(ModContent.TileType<EaselTile>())
-                    .Register();
+                resultItem = CrossModHelper.SafelyGetCrossModItem(calvalex, "OldModIconPainting");
+                if (resultItem != 0)
+                    Recipe.Create(resultItem)
+                        .AddIngredient(ModContent.ItemType<Canvas>())
+                        .AddIngredient(ItemID.RedPaint)
+                        .AddTile(ModContent.TileType<EaselTile>())
+                        .Register();
 
-                Recipe.Create(calvalex.Find<ModItem>("OldUCMMPainting").Type)
-                    .AddIngredient(ModContent.ItemType<Canvas>())
-                    .AddIngredient(ItemID.RedPaint)
-                    .AddTile(ModContent.TileType<EaselTile>())
-                    .Register();
+                resultItem = CrossModHelper.SafelyGetCrossModItem(calvalex, "OldUCMMPainting");
+                if (resultItem != 0)
+                    Recipe.Create(resultItem)
+                        .AddIngredient(ModContent.ItemType<Canvas>())
+                        .AddIngredient(ItemID.RedPaint)
+                        .AddTile(ModContent.TileType<EaselTile>())
+                        .Register();
 
-                Recipe.Create(calvalex.Find<ModItem>("Plague22").Type)
-                    .AddIngredient(ModContent.ItemType<Canvas>())
-                    .AddIngredient(ItemID.LimePaint)
-                    .AddTile(ModContent.TileType<EaselTile>())
-                    .Register();
+                resultItem = CrossModHelper.SafelyGetCrossModItem(calvalex, "Plague22");
+                if (resultItem != 0)
+                    Recipe.Create(resultItem)
+                        .AddIngredient(ModContent.ItemType<Canvas>())
+                        .AddIngredient(ItemID.LimePaint)
+                        .AddTile(ModContent.TileType<EaselTile>())
+                        .Register();
 
-                Recipe.Create(calvalex.Find<ModItem>("RogueExtractor").Type)
-                    .AddIngredient(ModContent.ItemType<Canvas>())
-                    .AddIngredient(ItemID.VioletPaint)
-                    .AddTile(ModContent.TileType<EaselTile>())
-                    .Register();
+                resultItem = CrossModHelper.SafelyGetCrossModItem(calvalex, "RogueExtractor");
+                if (resultItem != 0)
+                    Recipe.Create(resultItem)
+                        .AddIngredient(ModContent.ItemType<Canvas>())
+                        .AddIngredient(ItemID.VioletPaint)
+                        .AddTile(ModContent.TileType<EaselTile>())
+                        .Register();
 
-                Recipe.Create(calvalex.Find<ModItem>("Scourgy").Type)
-                    .AddIngredient(ModContent.ItemType<Canvas>())
-                    .AddIngredient(ItemID.TealPaint)
-                    .AddTile(ModContent.TileType<EaselTile>())
-                    .Register();
+                resultItem = CrossModHelper.SafelyGetCrossModItem(calvalex, "Scourgy");
+                if (resultItem != 0)
+                    Recipe.Create(resultItem)
+                        .AddIngredient(ModContent.ItemType<Canvas>())
+                        .AddIngredient(ItemID.TealPaint)
+                        .AddTile(ModContent.TileType<EaselTile>())
+                        .Register();
 
-                Recipe.Create(calvalex.Find<ModItem>("Signut").Type)
-                    .AddIngredient(ModContent.ItemType<Canvas>())
-                    .AddIngredient(ItemID.PurplePaint)
-                    .AddTile(ModContent.TileType<EaselTile>())
-                    .Register();
+                resultItem = CrossModHelper.SafelyGetCrossModItem(calvalex, "Signut");
+                if (resultItem != 0)
+                    Recipe.Create(resultItem)
+                        .AddIngredient(ModContent.ItemType<Canvas>())
+                        .AddIngredient(ItemID.PurplePaint)
+                        .AddTile(ModContent.TileType<EaselTile>())
+                        .Register();
 
-                Recipe.Create(calvalex.Find<ModItem>("SleepingGiant").Type)
-                    .AddIngredient(ModContent.ItemType<Canvas>())
-                    .AddIngredient(ItemID.TealPaint)
-                    .AddTile(ModContent.TileType<EaselTile>())
-                    .Register();
+                resultItem = CrossModHelper.SafelyGetCrossModItem(calvalex, "SleepingGiant");
+                if (resultItem != 0)
+                    Recipe.Create(resultItem)
+                        .AddIngredient(ModContent.ItemType<Canvas>())
+                        .AddIngredient(ItemID.TealPaint)
+                        .AddTile(ModContent.TileType<EaselTile>())
+                        .Register();
 
-                Recipe.Create(calvalex.Find<ModItem>("Snouts").Type)
-                    .AddIngredient(ModContent.ItemType<Canvas>())
-                    .AddIngredient(ItemID.TealPaint)
-                    .AddTile(ModContent.TileType<EaselTile>())
-                    .Register();
+                resultItem = CrossModHelper.SafelyGetCrossModItem(calvalex, "Snouts");
+                if (resultItem != 0)
+                    Recipe.Create(resultItem)
+                        .AddIngredient(ModContent.ItemType<Canvas>())
+                        .AddIngredient(ItemID.TealPaint)
+                        .AddTile(ModContent.TileType<EaselTile>())
+                        .Register();
 
-                Recipe.Create(calvalex.Find<ModItem>("SundayAfternoon").Type)
-                    .AddIngredient(ModContent.ItemType<Canvas>())
-                    .AddIngredient(ItemID.GreenPaint)
-                    .AddTile(ModContent.TileType<EaselTile>())
-                    .Register();
+                resultItem = CrossModHelper.SafelyGetCrossModItem(calvalex, "SundayAfternoon");
+                if (resultItem != 0)
+                    Recipe.Create(resultItem)
+                        .AddIngredient(ModContent.ItemType<Canvas>())
+                        .AddIngredient(ItemID.GreenPaint)
+                        .AddTile(ModContent.TileType<EaselTile>())
+                        .Register();
 
-                Recipe.Create(calvalex.Find<ModItem>("SwearingShroom").Type)
-                    .AddIngredient(ModContent.ItemType<Canvas>())
-                    .AddIngredient(ItemID.BluePaint)
-                    .AddTile(ModContent.TileType<EaselTile>())
-                    .Register();
+                resultItem = CrossModHelper.SafelyGetCrossModItem(calvalex, "SwearingShroom");
+                if (resultItem != 0)
+                    Recipe.Create(resultItem)
+                        .AddIngredient(ModContent.ItemType<Canvas>())
+                        .AddIngredient(ItemID.BluePaint)
+                        .AddTile(ModContent.TileType<EaselTile>())
+                        .Register();
 
-                Recipe.Create(calvalex.Find<ModItem>("TheGreatSandworm").Type)
-                    .AddIngredient(ModContent.ItemType<Canvas>())
-                    .AddIngredient(ItemID.BrownPaint)
-                    .AddTile(ModContent.TileType<EaselTile>())
-                    .Register();
+                resultItem = CrossModHelper.SafelyGetCrossModItem(calvalex, "TheGreatSandworm");
+                if (resultItem != 0)
+                    Recipe.Create(resultItem)
+                        .AddIngredient(ModContent.ItemType<Canvas>())
+                        .AddIngredient(ItemID.BrownPaint)
+                        .AddTile(ModContent.TileType<EaselTile>())
+                        .Register();
 
-                Recipe.Create(calvalex.Find<ModItem>("TheYhar").Type)
-                    .AddIngredient(ModContent.ItemType<Canvas>())
-                    .AddIngredient(ItemID.YellowPaint)
-                    .AddTile(ModContent.TileType<EaselTile>())
-                    .Register();
+                resultItem = CrossModHelper.SafelyGetCrossModItem(calvalex, "TheYhar");
+                if (resultItem != 0)
+                    Recipe.Create(resultItem)
+                        .AddIngredient(ModContent.ItemType<Canvas>())
+                        .AddIngredient(ItemID.YellowPaint)
+                        .AddTile(ModContent.TileType<EaselTile>())
+                        .Register();
 
-                Recipe.Create(calvalex.Find<ModItem>("UCMMPainting").Type)
-                    .AddIngredient(ModContent.ItemType<Canvas>())
-                    .AddIngredient(ItemID.BluePaint)
-                    .AddTile(ModContent.TileType<EaselTile>())
-                    .Register();
+                resultItem = CrossModHelper.SafelyGetCrossModItem(calvalex, "UCMMPainting");
+                if (resultItem != 0)
+                    Recipe.Create(resultItem)
+                        .AddIngredient(ModContent.ItemType<Canvas>())
+                        .AddIngredient(ItemID.BluePaint)
+                        .AddTile(ModContent.TileType<EaselTile>())
+                        .Register();
 
-                Recipe.Create(calvalex.Find<ModItem>("UnholyTrip").Type)
-                    .AddIngredient(ModContent.ItemType<Canvas>())
-                    .AddIngredient(ItemID.TealPaint)
-                    .AddTile(ModContent.TileType<EaselTile>())
-                    .Register();
+                resultItem = CrossModHelper.SafelyGetCrossModItem(calvalex, "UnholyTrip");
+                if (resultItem != 0)
+                    Recipe.Create(resultItem)
+                        .AddIngredient(ModContent.ItemType<Canvas>())
+                        .AddIngredient(ItemID.TealPaint)
+                        .AddTile(ModContent.TileType<EaselTile>())
+                        .Register();
 
-                Recipe.Create(calvalex.Find<ModItem>("VVanities").Type)
-                    .AddIngredient(ModContent.ItemType<Canvas>())
-                    .AddIngredient(ItemID.RedPaint)
-                    .AddTile(ModContent.TileType<EaselTile>())
-                    .Register();
+                resultItem = CrossModHelper.SafelyGetCrossModItem(calvalex, "VVanities");
+                if (resultItem != 0)
+                    Recipe.Create(resultItem)
+                        .AddIngredient(ModContent.ItemType<Canvas>())
+                        .AddIngredient(ItemID.RedPaint)
+                        .AddTile(ModContent.TileType<EaselTile>())
+                        .Register();
 
-                Recipe.Create(calvalex.Find<ModItem>("WilliamPainting").Type)
-                    .AddIngredient(ModContent.ItemType<Canvas>())
-                    .AddIngredient(ItemID.RedPaint)
-                    .AddTile(ModContent.TileType<EaselTile>())
-                    .Register();
+                resultItem = CrossModHelper.SafelyGetCrossModItem(calvalex, "WilliamPainting");
+                if (resultItem != 0)
+                    Recipe.Create(resultItem)
+                        .AddIngredient(ModContent.ItemType<Canvas>())
+                        .AddIngredient(ItemID.RedPaint)
+                        .AddTile(ModContent.TileType<EaselTile>())
+                        .Register();
 
-                Recipe.Create(calvalex.Find<ModItem>("WormHeaven").Type)
-                    .AddIngredient(ModContent.ItemType<Canvas>())
-                    .AddIngredient(ItemID.SkyBluePaint)
-                    .AddTile(ModContent.TileType<EaselTile>())
-                    .Register();
+                resultItem = CrossModHelper.SafelyGetCrossModItem(calvalex, "WormHeaven");
+                if (resultItem != 0)
+                    Recipe.Create(resultItem)
+                        .AddIngredient(ModContent.ItemType<Canvas>())
+                        .AddIngredient(ItemID.SkyBluePaint)
+                        .AddTile(ModContent.TileType<EaselTile>())
+                        .Register();
 
-                Recipe.Create(calvalex.Find<ModItem>("Yharlamitas").Type)
+                resultItem = CrossModHelper.SafelyGetCrossModItem(calvalex, "Yharlamitas");
+                if (resultItem != 0)
+                    Recipe.Create(resultItem)
                     .AddIngredient(ModContent.ItemType<Canvas>())
                     .AddIngredient(ItemID.GrayPaint)
                     .AddTile(ModContent.TileType<EaselTile>())
@@ -1736,7 +1809,9 @@ namespace CraftablePaintings
             #region Fargo's Mutant Mod
             if (ModLoader.TryGetMod("Fargowiltas", out Mod fargoMutant) && craftModdedPaintings)
             {
-                Recipe.Create(fargoMutant.Find<ModItem>("EchPainting").Type)
+                resultItem = CrossModHelper.SafelyGetCrossModItem(fargoMutant, "EchPainting");
+                if (resultItem != 0)
+                    Recipe.Create(resultItem)
                     .AddIngredient(ModContent.ItemType<Canvas>())
                     .AddIngredient(ItemID.WhitePaint)
                     .AddIngredient(ItemID.LunarOre)
@@ -1748,19 +1823,23 @@ namespace CraftablePaintings
             #region Fargo's Soul Mod
             if (ModLoader.TryGetMod("FargowiltasSouls", out Mod fargoSoul) && craftModdedPaintings)
             {
-               Recipe.Create(fargoSoul.Find<ModItem>("TwentyTwoPainting").Type)
-                    .AddIngredient(ModContent.ItemType<Canvas>())
-                    .AddIngredient(ItemID.PurplePaint)
-                    .AddIngredient(ItemID.BeeWax)
-                    .AddTile(ModContent.TileType<EaselTile>())
-                    .Register();
+                resultItem = CrossModHelper.SafelyGetCrossModItem(fargoSoul, "TwentyTwoPainting");
+                if (resultItem != 0)
+                    Recipe.Create(resultItem)
+                        .AddIngredient(ModContent.ItemType<Canvas>())
+                        .AddIngredient(ItemID.PurplePaint)
+                        .AddIngredient(ItemID.BeeWax)
+                        .AddTile(ModContent.TileType<EaselTile>())
+                        .Register();
 
-                Recipe.Create(fargoSoul.Find<ModItem>("ScremPainting").Type)
-                    .AddIngredient(ModContent.ItemType<Canvas>())
-                    .AddIngredient(ItemID.BrownPaint)
-                    .AddIngredient(fargoSoul.Find<ModItem>("EternalEnergy").Type)
-                    .AddTile(ModContent.TileType<EaselTile>())
-                    .Register();
+                resultItem = CrossModHelper.SafelyGetCrossModItem(fargoSoul, "ScremPainting");
+                if (resultItem != 0)
+                    Recipe.Create(resultItem)
+                        .AddIngredient(ModContent.ItemType<Canvas>())
+                        .AddIngredient(ItemID.BrownPaint)
+                        .AddIngredient(CrossModHelper.SafelyGetCrossModItem(fargoSoul, "EternalEnergy"))
+                        .AddTile(ModContent.TileType<EaselTile>())
+                        .Register();
             }
             #endregion
 
