@@ -1,0 +1,25 @@
+﻿// Language: pl-PL (Polish)
+
+
+Mods: {
+	CraftablePaintings: {
+		Config: {
+			Server : {
+				LabelGeneral1: "[i:3122]   Twórz modowane obrazy"
+			}
+		}
+		ItemName: {
+			EaselItem: Sztaluga
+			Canvas: Płótno
+		}
+		ItemTooltip: {
+			EaselItem: Twórz modowane obrazy
+		}
+		TileName: {
+			EaselTile: "{$Mods.CraftablePaintings.ItemName.EaselItem}"
+		}
+		MapObject: {
+			EaselTile: "{$Mods.CraftablePaintings.ItemName.EaselItem}"
+		}
+	}
+}

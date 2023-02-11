@@ -30,7 +30,10 @@ namespace CraftablePaintings
 			return function switch
 			{
 				"CraftModdedPaintings" => (bool)ModContent.GetInstance<CraftablePaintingsConfigServer>().CraftModdedPaintings,
-				_ => throw new ArgumentException($"Function \"{function}\" is not defined by BossesAsNPCs"),
+				"EaselTileType" => (int)ModContent.TileType<EaselTile>(),
+				"EaselItemType" => (int)ModContent.ItemType<EaselItem>(),
+				"CanvasItemType" => (int)ModContent.ItemType<Canvas>(),
+				_ => throw new ArgumentException($"Function \"{function}\" is not defined by Craftable Paintings"),
 			};
 		}
 	}

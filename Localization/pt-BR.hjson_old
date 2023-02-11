@@ -1,0 +1,25 @@
+﻿// Language: pt-BR (Portuguese)
+
+
+Mods: {
+	CraftablePaintings: {
+		Config: {
+			Server : {
+				LabelGeneral1: "[i:3122]   Pinturas de Modded Artesanal"
+			}
+		}
+		ItemName: {
+			EaselItem: Cavalete
+			Canvas: Lona
+		}
+		ItemTooltip: {
+			EaselItem: Usado para criar pinturas
+		}
+		TileName: {
+			EaselTile: "{$Mods.CraftablePaintings.ItemName.EaselItem}"
+		}
+		MapObject: {
+			EaselTile: "{$Mods.CraftablePaintings.ItemName.EaselItem}"
+		}
+	}
+}

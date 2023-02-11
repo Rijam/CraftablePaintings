@@ -10,5 +10,6 @@ Includes paintings from:
 	Calamity's Vanities
 	Fargo's Mutant Mod
 	Fargo's Souls Mod
+	Polarities
 
 Modded painting recipes must first be enabled in the config!

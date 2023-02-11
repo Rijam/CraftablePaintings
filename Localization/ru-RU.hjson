@@ -1,25 +1,39 @@
-﻿// Language: ru-RU (Russian)
+// Language: en-US (English)
 
 
 Mods: {
 	CraftablePaintings: {
 		Config: {
-			Server : {
+			Server: {
+				// Header: "[c/00FF00:Server Options]"
 				LabelGeneral1: "[i:3122]   Крафт Модифицированные картины"
+				/* TooltipGeneral1:
+					'''
+					This option toggles if paintings from the supported mods can be crafted.
+					  When On: All modded paintings WILL be craftable.
+					  When Off: All modded paintings WILL NOT be craftable.
+					    Turn Off in case of a mod conflict or you are getting
+					    errors stating that a recipe has no result.
+					Default value: Off
+					Reload required.
+					''' */
+				// MultiplayerMessage: You are not the server owner so you can not change this config!
 			}
 		}
-		ItemName: {
-			EaselItem: Мольберт
-			Canvas: Холст
+
+		Items: {
+			EaselItem: {
+				DisplayName: Мольберт
+				Tooltip: Используется для изготовления картин
+			}
+
+			Canvas: {
+				DisplayName: Холст
+				// Tooltip: ""
+			}
 		}
-		ItemTooltip: {
-			EaselItem: Используется для изготовления картин
-		}
-		TileName: {
-			EaselTile: "{$Mods.CraftablePaintings.ItemName.EaselItem}"
-		}
-		MapObject: {
-			EaselTile: "{$Mods.CraftablePaintings.ItemName.EaselItem}"
-		}
+
+		// TileName.EaselTile: "{$Mods.CraftablePaintings.ItemName.EaselItem}"
+		// Tiles.EaselTile.MapEntry: "{$Mods.CraftablePaintings.ItemName.EaselItem}"
 	}
 }

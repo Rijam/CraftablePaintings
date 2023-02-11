@@ -4,7 +4,7 @@
 Mods: {
 	CraftablePaintings: {
 		Config: {
-			Server: {
+			Server : {
 				Header: "[c/00FF00:Server Options]"
 				LabelGeneral1: "[i:3122]   Craft Modded Paintings"
 				TooltipGeneral1:
@@ -20,20 +20,18 @@ Mods: {
 				MultiplayerMessage: You are not the server owner so you can not change this config!
 			}
 		}
-
-		Items: {
-			EaselItem: {
-				DisplayName: Easel
-				Tooltip: Used to craft paintings
-			}
-
-			Canvas: {
-				DisplayName: Canvas
-				Tooltip: ""
-			}
+		ItemName: {
+			EaselItem: Easel
+			Canvas: Canvas
 		}
-
-		TileName.EaselTile: "{$Mods.CraftablePaintings.ItemName.EaselItem}"
-		Tiles.EaselTile.MapEntry: "{$Mods.CraftablePaintings.ItemName.EaselItem}"
+		ItemTooltip: {
+			EaselItem: Used to craft paintings
+		}
+		TileName: {
+			EaselTile: "{$Mods.CraftablePaintings.ItemName.EaselItem}"
+		}
+		MapObject: {
+			EaselTile: "{$Mods.CraftablePaintings.ItemName.EaselItem}"
+		}
 	}
 }
