@@ -140,56 +140,56 @@ namespace CraftablePaintings
 				.AddIngredient(ModContent.ItemType<Canvas>())
 				.AddIngredient(ItemID.BlackPaint)
 				.AddTile(ModContent.TileType<EaselTile>())
-				.AddCondition(Recipe.Condition.InGraveyardBiome)
+				.AddCondition(Condition.InGraveyard)
 				.Register();
 
 			Recipe.Create(ItemID.Reborn)
 				.AddIngredient(ModContent.ItemType<Canvas>())
 				.AddIngredient(ItemID.ShadowPaint)
 				.AddTile(ModContent.TileType<EaselTile>())
-				.AddCondition(Recipe.Condition.InGraveyardBiome)
+				.AddCondition(Condition.InGraveyard)
 				.Register();
 
 			Recipe.Create(ItemID.Graveyard)
 				.AddIngredient(ModContent.ItemType<Canvas>())
 				.AddIngredient(ItemID.BlackPaint)
 				.AddTile(ModContent.TileType<EaselTile>())
-				.AddCondition(Recipe.Condition.InGraveyardBiome)
+				.AddCondition(Condition.InGraveyard)
 				.Register();
 
 			Recipe.Create(ItemID.GhostManifestation)
 				.AddIngredient(ModContent.ItemType<Canvas>())
 				.AddIngredient(ItemID.NegativePaint)
 				.AddTile(ModContent.TileType<EaselTile>())
-				.AddCondition(Recipe.Condition.InGraveyardBiome)
+				.AddCondition(Condition.InGraveyard)
 				.Register();
 
 			Recipe.Create(ItemID.HailtotheKing)
 				.AddIngredient(ModContent.ItemType<Canvas>())
 				.AddIngredient(ItemID.BluePaint)
 				.AddTile(ModContent.TileType<EaselTile>())
-				.AddCondition(Recipe.Condition.InGraveyardBiome)
+				.AddCondition(Condition.InGraveyard)
 				.Register();
 
 			Recipe.Create(ItemID.WickedUndead)
 				.AddIngredient(ModContent.ItemType<Canvas>())
 				.AddIngredient(ItemID.YellowPaint)
 				.AddTile(ModContent.TileType<EaselTile>())
-				.AddCondition(Recipe.Condition.InGraveyardBiome)
+				.AddCondition(Condition.InGraveyard)
 				.Register();
 
 			Recipe.Create(ItemID.BloodyGoblet)
 				.AddIngredient(ModContent.ItemType<Canvas>())
 				.AddIngredient(ItemID.DeepRedPaint)
 				.AddTile(ModContent.TileType<EaselTile>())
-				.AddCondition(Recipe.Condition.InGraveyardBiome)
+				.AddCondition(Condition.InGraveyard)
 				.Register();
 
 			Recipe.Create(ItemID.StillLife)
 				.AddIngredient(ModContent.ItemType<Canvas>())
 				.AddIngredient(ItemID.GrayPaint)
 				.AddTile(ModContent.TileType<EaselTile>())
-				.AddCondition(Recipe.Condition.InGraveyardBiome)
+				.AddCondition(Condition.InGraveyard)
 				.Register();
 			#endregion
 

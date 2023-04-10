@@ -22,10 +22,5 @@ namespace CraftablePaintings.Tiles
 			TileObjectData.addTile(Type);
 			AddMapEntry(new Color(148, 148, 94), CreateMapEntryName());
 		}
-
-		public override void KillMultiTile(int i, int j, int frameX, int frameY)
-		{
-			Item.NewItem(new EntitySource_TileBreak(i, j), i * 16, j * 16, 32, 48, ModContent.ItemType<Items.EaselItem>());
-		}
 	}
 }
