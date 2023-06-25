@@ -11,16 +11,13 @@ namespace CraftablePaintings
 	/// This config operates on a server basis. 
 	/// These parameters are synced from the server.
 	/// </summary>
-	[Label("Server Options")]
 	public class CraftablePaintingsConfigServer : ModConfig
 	{
 		public override ConfigScope Mode => ConfigScope.ServerSide;
 
-		[Header("$Mods.CraftablePaintings.Config.Server.Header")]
-		[Label("$Mods.CraftablePaintings.Config.Server.LabelGeneral1")]
-		[Tooltip("$Mods.CraftablePaintings.Config.Server.TooltipGeneral1")]
+		[Header("ServerHeader")]
 		[ReloadRequired]
-		[DefaultValue(false)]
+		[DefaultValue(true)]
 		public bool CraftModdedPaintings { get; set; }
 
 		/* Not written by Rijam*/
@@ -51,7 +48,7 @@ namespace CraftablePaintings
 
 			if (!IsPlayerLocalServerOwner(whoAmI))
 			{
-				message = Language.GetTextValue("Mods.CraftablePaintings.NPCDialog.Config.Server.MultiplayerMessage");
+				message = Language.GetTextValue("Mods.CraftablePaintings.Configs.CraftablePaintingsConfigServer.MultiplayerMessage");
 				return false;
 			}
 			return base.AcceptClientChanges(pendingConfig, whoAmI, ref message);

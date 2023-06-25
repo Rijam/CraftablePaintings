@@ -12,4 +12,4 @@ Includes paintings from:
 	Fargo's Souls Mod
 	Polarities
 
-Modded painting recipes must first be enabled in the config!
+Modded painting recipes can be disabled in the config!
