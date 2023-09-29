@@ -1378,7 +1378,7 @@ namespace CraftablePaintings
 			#region Calamity
 			if (ModLoader.TryGetMod("CalamityMod", out Mod calamity) && craftModdedPaintings)
 			{
-				resultItem = CrossModHelper.SafelyGetCrossModItem(calamity, "ThankYou");
+				resultItem = CrossModHelper.SafelyGetCrossModItem(calamity, "ThankYouPainting");
 				if (resultItem != 0)
 					Recipe.Create(resultItem)
 						.AddIngredient(ModContent.ItemType<Canvas>())

@@ -48,6 +48,7 @@ namespace CraftablePaintings
 
 			if (!IsPlayerLocalServerOwner(whoAmI))
 			{
+				//message = NetworkText.FromKey("Mods.CraftablePaintings.Configs.CraftablePaintingsConfigServer.MultiplayerMessage");
 				message = Language.GetTextValue("Mods.CraftablePaintings.Configs.CraftablePaintingsConfigServer.MultiplayerMessage");
 				return false;
 			}

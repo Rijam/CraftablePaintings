@@ -12,7 +12,7 @@ namespace CraftablePaintings.Items
 		}
 		public override void SetDefaults()
 		{
-			Item.maxStack = 999;
+			Item.maxStack = Item.CommonMaxStack;
 			Item.width = 46;
 			Item.height = 36;
 			Item.value = Item.sellPrice(0, 0, 4, 0);
